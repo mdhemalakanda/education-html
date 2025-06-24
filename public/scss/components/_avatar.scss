@@ -1,0 +1,11 @@
+.ed-avatar-group {
+    display: inline-block;
+    img {
+        width: 46px;
+        height: 46px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin: 0 -10px;
+        border: 2px solid var(--ed-color-white);
+    }
+}

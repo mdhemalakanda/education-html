@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400..800;1,400..800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--ed-base-font);
+    font-size: var(--ed-body-font);
+}
+
+p {
+    font-size: var(--ed-body-font);
+    color: var(--ed-color-body);
+}
+
+h1, .ed-h1, h2, .ed-h2, h3, .ed-h3, h4, .ed-h4, h5, .ed-h5, h6, .ed-h6, strong {
+    color: var(--ed-color-black);
+}
+
+h1, .ed-h1 {
+    font-weight: 700;
+    font-size: 150px;
+}
+
+h2, .ed-h2 {
+    font-weight: 700;
+    font-size: 60px;
+}
+
+h3, .ed-h3 {
+    font-weight: 700;
+    font-size: 44px;
+}
+
+h4, .ed-h4 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+h5, .ed-h5 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+h6, .ed-h6 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1320px;
+}
+
+.row {
+    --bs-gutter-x: 30px;
+}
+
+a, button {
+    transition: all .3s;
+}
+
+/* Hide clear (×) icon in Chrome, Edge, and Safari */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.ed-bg-default {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ed-bg-bottom-left {
+  background-position: bottom left;  
+}
+
+.ed-bg-bottom-right {
+  background-position: bottom right;
+}
+
+.ed-bg-primary {
+  background-color: var(--ed-color-primary);
+}
+
+@for $i from 0 through 300 {
+  .ed-pt-#{$i} {
+    padding-top: #{$i}px;
+  }
+  .ed-pb-#{$i} {
+    padding-bottom: #{$i}px;
+  }
+  .ed-pl-#{$i} {
+    padding-left: #{$i}px;
+  }
+  .ed-pr-#{$i} {
+    padding-right: #{$i}px;
+  }
+  .ed-p-#{$i} {
+    padding: #{$i}px;
+  }
+}
+@for $i from 0 through 300 {
+  .ed-mt-#{$i} {
+    margin-top: #{$i}px;
+  }
+  .ed-mb-#{$i} {
+    margin-bottom: #{$i}px;
+  }
+  .ed-ml-#{$i} {
+    margin-left: #{$i}px;
+  }
+  .ed-mr-#{$i} {
+    margin-right: #{$i}px;
+  }
+  .ed-m-#{$i} {
+    margin: #{$i}px;
+  }
+}
+
+.mt-reverse-35 {
+  margin-top: -35px;
+}
+
+.ed-max-1920 {
+  max-width: 1920px;
+}
+
+img {
+    max-width: 100%;
+}
+
+// colors.
+.ed-text-white {
+    color: var(--ed-color-white);
+}
+.ed-bg-white {
+    background-color: var(--ed-color-white);
+}
+hr {
+    background: var(--ed-color-border);
+}
+.bg-soft-primary {
+  background-color: #EDF2F6;
+}

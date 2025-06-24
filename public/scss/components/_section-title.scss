@@ -1,0 +1,11 @@
+.ed-section-title .ed-title {
+    display: flex;
+    align-items: center;
+    grid-gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    line-height: 1.4;
+    & > img {
+        max-width: 34px;
+    }
+}

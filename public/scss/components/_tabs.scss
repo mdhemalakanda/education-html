@@ -1,0 +1,30 @@
+.ed-course-menu-tabs {
+    border-bottom: 1px solid var(--ed-color-border);
+    display: flex;
+    grid-gap: 30px 40px;
+    width: fit-content;
+
+    & button {
+        border: 0;
+        background: transparent;
+        padding: 20px 0;
+        font-weight: 500;
+        position: relative;
+        color: var(--ed-color-body);
+        &::after , &.active::after {
+            position: absolute;
+            right: 0;
+            width: 0;
+            transition: all .3s;
+            height: 4px;
+            bottom: -1px;
+            background-color: var(--ed-color-primary);
+            content: "";
+        }
+        &:hover::after, &.active::after{
+            width: 100%;
+            right: auto;
+            left: 0;
+        }
+    }
+}
