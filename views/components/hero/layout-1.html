@@ -1,0 +1,57 @@
+{% set banner_slider = [
+    {
+        title: "Graphic Design Master Class",
+        img: "/images/course/course-1.jpg",
+        lesson_count: 24,
+        students_count: 78,
+        content: "Nam a felis erat mauris eget sempe Orci arius natoque penatibus magnis dis.",
+        price: "Free"
+    },
+    {
+        title: "Learn Python With AI/ML",
+        img: "/images/course/course-1.jpg",
+        lesson_count: 24,
+        students_count: 78,
+        content: "Nam a felis erat mauris eget sempe Orci arius natoque penatibus magnis dis.",
+        price: "Free"
+    }
+] %}
+<!-- banner area start -->
+<section class="ed-banner-area ed-bg-primary ed-pt-185 mt-reverse-35">
+    <h1 class="ed-banner-title ed-text-white ed-max-1920 mx-auto"><span>EDUCATIONAL</span> <span>MATERIAL</span></h1>
+    <div class="ed-banner-inner-content ed-pl-105 ed-pr-105 ed-pt-20 ed-max-1920 mx-auto">
+        <div class="ed-inner ed-pl-30">
+            <div class="row align-items-center">
+                <div class="col-xxl-6">
+                    <div class="ed-course-view-sm-box">
+                        <div class="ed-icon">
+                            <img src="/images/icons/player.png" alt="Player icon">
+                        </div>
+                        <div class="ed-content">
+                            <h6 class="ed-title">274+ Top Courses</h6>
+                            <p>Nam nec mauris dignissim ligula</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-6">
+                    <div class="ed-banner-carousel-active-wrapper">
+                        <div class="ed-banner-course-carousel-active swiper">
+                            <div class="swiper-wrapper">
+                                {% for banner_slide in banner_slider %}
+                                <div class="swiper-slide">
+                                    {% include "components/card/course/layout-horizontal.html" %}
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="ed-swiper-number-dots ed-banner-coiurse-carousel-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ed-banner-image">
+        <img src="/images/banner/banner-image.png" alt="Player Image">
+    </div>
+</section>
+<!-- banner area end -->

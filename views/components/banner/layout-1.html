@@ -1,0 +1,17 @@
+{% macro banner(title, subtitle, img, btn_label, btn_url) %}
+<div class="ed-category-banner ed-mt-35">
+    <div class="ed-category-banner-left-img">
+        <img src="{{ banner_img | default('/images/icons/category-banner.png') }}" alt="Category Banner">
+    </div>
+    <div class="ed-content">
+        <div class="ed-content-left">
+            <span class="ed-subtitle">{{ subtitle }}</span>
+            <h6 class="ed-title">{{ title }}</h6>
+        </div>
+        <div class="ed-content-right">
+            {% import "components/button/button-wide.html" as btn %}
+            {{ btn.button(btn_url, btn_label) }}
+        </div>
+    </div>
+</div>
+{% endmacro %}

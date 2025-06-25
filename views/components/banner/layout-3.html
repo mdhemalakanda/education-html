@@ -1,0 +1,36 @@
+{% macro testimonialBanner(rating=4.8, googleIcon="/images/icons/google.svg", planeIcon="/images/icons/plane-2.svg", buttonText="View all Testimonials", buttonLink="#") %}
+<div class="ed-testimonial-banner ed-mt-55">
+    <div class="row">
+        <div class="col-xxl-4">
+            <div class="ed-left">
+                <div class="ed-google-rating-box">
+                    <div class="ed-icon">
+                        <img src="{{ googleIcon }}" alt="Google">
+                    </div>
+                    <div class="ed-content">
+                        <div class="ed-rarting">
+                            <div class="rating-stars">
+                                {% for i in range(0, 5) %}
+                                    <i class="fas fa-star"></i>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <b>{{ rating }} Rating on Google</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-3">
+            <div class="ed-plane-box text-center">
+                <img src="{{ planeIcon }}" alt="Plane">
+            </div>
+        </div>
+        <div class="col-xxl-5">
+            <div class="text-end">
+                {% import "components/button/button-wide.html" as btn %}
+                {{ btn.button('#', 'View all Testimonials') }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endmacro %}

@@ -1,0 +1,226 @@
+{% set courses = [
+    {
+        badge: "Learning",
+        img_url: "/images/course/course-img-1.jpg",
+        lesson_count: 34,
+        student_count: 78,
+        title: "Expert Graphic Design Course Learn High-Quality Design.",
+        price: "$180.0",
+        btn_label: "Learn More",
+        btn_url: "#"
+    },
+    {
+        badge: "Learning",
+        img_url: "/images/course/course-img-2.jpg",
+        lesson_count: 20,
+        student_count: 82,
+        title: "Creating an SEO Business Operated From Home.",
+        price: "$234.0",
+        btn_label: "Learn More",
+        btn_url: "#"
+    },
+    {
+        badge: "Learning",
+        img_url: "/images/course/course-img-3.jpg",
+        lesson_count: 65,
+        student_count: 86 ,
+        title: "Expand person financial being ideas & build principles.",
+        price: "$140.0",
+        btn_label: "Learn More",
+        btn_url: "#"
+    },
+    {
+        badge: "Learning",
+        img_url: "/images/course/course-img-4.jpg",
+        lesson_count: 16,
+        student_count: 38,
+        title: "Machine Learning from Start Finish: Python & Java in Practice.",
+        price: "$300.0",
+        btn_label: "Learn More",
+        btn_url: "#"
+    },
+    {
+        badge: "CSE",
+        img_url: "/images/course/course-img-5.jpg",
+        lesson_count: 16,
+        student_count: 38,
+        title: "Computer Science: Quantitative and Analytical Methods.",
+        price: "$364.0",
+        btn_label: "Learn More",
+        btn_url: "#"
+    },
+    {
+        badge: "Education",
+        img_url: "/images/course/course-img-6.jpg",
+        lesson_count: 6,
+        student_count: 46,
+        title: "Digital Marketing Masterclass + AI & ChatGPT.",
+        price: "$415.0",
+        btn_label: "Learn More",
+        btn_url: "#"
+    }
+] %}
+
+{% set testimonials = [
+    {
+        logo: "/images/icons/testimonial-logo-1.png",
+        rating: 5,
+        bg_class: "ed-bg-1",
+        text: "Mauris ut ex dui. Quisque bibendum posuere ague nam puros malasada suscept urn mantis leo. Maecenas macules locus  imperdiet luctus turpis porta Maecenas posuere ex magna, quis lobortis lacus Praesent nec nisl Donec nec pulvinar urna felis vitae ornare maximus",
+        author_img: "/images/icons/testimonial-author.jpg",
+        author_name: "Hanson Deck",
+        author_role: "Chief Executive Officer"
+    },
+    {
+        logo: "/images/icons/testimonial-logo-2.png",
+        rating: 5,
+        bg_class: "ed-bg-2",
+        text: "Mauris ut ex dui. Quisque bibendum posuere ague nam puros malasada suscept urn mantis leo. Maecenas macules locus  imperdiet luctus turpis porta Maecenas posuere ex magna, quis lobortis lacus Praesent nec nisl Donec nec pulvinar urna felis vitae ornare maximus",
+        author_img: "/images/icons/testimonial-author.jpg",
+        author_name: "Hanson Deck",
+        author_role: "Chief Executive Officer"
+    },
+    {
+        logo: "/images/icons/testimonial-logo-3.png",
+        rating: 5,
+        bg_class: "ed-bg-3",
+        text: "Mauris ut ex dui. Quisque bibendum posuere ague nam puros malasada suscept urn mantis leo. Maecenas macules locus  imperdiet luctus turpis porta Maecenas posuere ex magna, quis lobortis lacus Praesent nec nisl Donec nec pulvinar urna felis vitae ornare maximus",
+        author_img: "/images/icons/testimonial-author.jpg",
+        author_name: "Hanson Deck",
+        author_role: "Chief Executive Officer"
+    },
+    {
+        logo: "/images/icons/testimonial-logo-2.png",
+        rating: 5,
+        bg_class: "ed-bg-2",
+        text: "Mauris ut ex dui. Quisque bibendum posuere ague nam puros malasada suscept urn mantis leo. Maecenas macules locus  imperdiet luctus turpis porta Maecenas posuere ex magna, quis lobortis lacus Praesent nec nisl Donec nec pulvinar urna felis vitae ornare maximus",
+        author_img: "/images/icons/testimonial-author.jpg",
+        author_name: "Hanson Deck",
+        author_role: "Chief Executive Officer"
+    },
+    {
+        logo: "/images/icons/testimonial-logo-3.png",
+        rating: 5,
+        bg_class: "ed-bg-3",
+        text: "Mauris ut ex dui. Quisque bibendum posuere ague nam puros malasada suscept urn mantis leo. Maecenas macules locus  imperdiet luctus turpis porta Maecenas posuere ex magna, quis lobortis lacus Praesent nec nisl Donec nec pulvinar urna felis vitae ornare maximus",
+        author_img: "/images/icons/testimonial-author.jpg",
+        author_name: "Hanson Deck",
+        author_role: "Chief Executive Officer"
+    }
+] %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+{% include "partials/head.html" %}
+<body>
+<!-- header area start -->
+<header class="ed-header-area">
+    {% include "components/header/layout-1/topbar.html" %}
+    {% include "components/header/layout-1/middle.html" %}
+    {% include "components/header/layout-1/nav.html" %}
+</header>
+<!-- header area end -->
+
+{% include "components/hero/layout-1.html" %}
+{% include "components/category/layout-1.html" %}
+
+<!-- related course area start -->
+<section class="related-course-area bg-soft-primary ed-pt-95 ed-pb-90">
+    <div class="container">
+        <div class="row align-items-center ed-pb-45">
+            <div class="col-xxl-6">
+                <div class="ed-section-title text-center">
+                    <h3 class="ed-title justify-content-start"><img src="/images/icons/book.svg" alt=""> Rated Learning Tutorials</h3>
+                </div>
+            </div>
+            <div class="col-xxl-6">
+                <div class="ed-course-menu-tabs ms-auto">
+                    <button>UI/UX Design</button>
+                    <button class="active">Development</button>
+                    <button>Marketing</button>
+                    <button>Business</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="ed-related-course-wrapper">
+            <div class="row">
+                {% for course in courses %}
+                <div class="col-xxl-4">
+                    <div class="ed-mb-30">
+                        {% include "components/card/course/layout-default.html" %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- related course area end -->
+
+<!-- course banner 2 start -->
+<div class="ed-course-banner-2 ed-pt-120">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-6">
+                {% import "components/banner/layout-2.html" as banner_component %}
+                {{ banner_component.banner('', '<span>DIGITAL</span> Classes by History', '/images/banner/banner-img-1.png') }}
+            </div>
+            <div class="col-xxl-6">
+                {% import "components/banner/layout-2.html" as banner_component2 %}
+                {{ banner_component2.banner('bg-2', '<span>DIGITAL</span> Classes by History', '/images/banner/banner-img-2.png', 'ed-btn-purple') }}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- course banner 2 end -->
+
+{% include "components/live-course/layout-1.html" %}
+
+<!-- testimonial area start -->
+<section class="ed-testimonial-area ed-pt-110">
+    <div class="container">
+        <div class="ed-section-title ed-mb-40"><h3 class="ed-title d-block text-center">Learn
+            <div class="ed-avatar-group">
+                <img src="/images/icons/avatar-1.jpg" alt="Avatar">
+                <img src="/images/icons/avatar-2.jpg" alt="Avatar">
+                <img src="/images/icons/avatar-3.jpg" alt="Avatar">
+                <img src="/images/icons/avatar-4.jpg" alt="Avatar">
+            </div>
+            Testimonials<br/> & Success Stories.</h3>
+        </div>
+    </div>
+    <div class="ed-testimonial-active swiper">
+        <div class="swiper-wrapper">
+             {% for testimonial in testimonials %}
+            <div class="swiper-slide">
+                <div class="ed-testimonial-area">
+                    {% include "components/testimonial/layout-1.html" %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="container">
+        {% import "components/banner/layout-3.html" as macros %}
+        {{ macros.testimonialBanner() }}
+    </div>
+</section>
+<!-- testimonial area end -->
+
+<!-- team area start -->
+<div class="ed-team-area">
+    <div class="container">
+        <div class="ed-section-title ed-mb-40">
+            <h3 class="ed-title justify-content-center"><img src="/images/icons/team-user.svg" alt=""> Premiers Educators Here</h3>
+        </div>
+    </div>
+</div>
+<!-- team area end -->
+
+<br><br><br><br><br><br><br><br><br><br>
+
+{% include "partials/scripts.html" %}
+</body>
+</html>

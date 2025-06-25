@@ -1,0 +1,65 @@
+{% set categories = [
+    {
+        title: "Digital Marketing",
+        course_count: 34,
+        icon: "/images/categories/category-1.svg"
+    },
+    {
+        title: "IT & software",
+        course_count: 20,
+        icon: "/images/categories/category-2.svg"
+    },
+    {
+        title: "UX Designer",
+        course_count: 15,
+        icon: "/images/categories/category-3.svg"
+    },
+    {
+        title: "Finance & Accounting",
+        course_count: 10,
+        icon: "/images/categories/category-4.svg"
+    },
+    {
+        title: "Front-End Developer",
+        course_count: 50,
+        icon: "/images/categories/category-5.svg"
+    },
+    {
+        title: "design and printing",
+        course_count: 28,
+        icon: "/images/categories/category-6.svg"
+    },
+    {
+        title: "Sales Marketing",
+        course_count: 36,
+        icon: "/images/categories/category-7.svg"
+    },
+    {
+        title: "Graphic Design",
+        course_count: 48,
+        icon: "/images/categories/category-8.svg"
+    }
+] %}
+
+<!-- categories area start -->
+<section class="ed-categories-area ed-pt-120 ed-pb-120">
+    <div class="container">
+        <div class="ed-section-title ed-mb-40">
+            <h3 class="ed-title justify-content-center"><img src="/images/icons/category-icon.png" alt=""> Top Courses Categories</h3>
+        </div>
+        <div class="ed-category-wrapper">
+            <div class="row">
+                {% for category in categories %}
+                <div class="col-xxl-3">
+                    {% include "components/card/category/category-border.html" %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="ed-mt-35">
+            {% import "components/banner/layout-1.html" as banner %}
+            {{ banner.banner("Pinpointing To Suitable Courses", "Let Us Helps", "/images/icons/category-banner.png", "More Categories", "#") }}
+        </div>
+    </div>
+</section>
+<!-- categories area end -->

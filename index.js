@@ -8,7 +8,7 @@ nunjucks.configure('views', {
     express: app,
     watch: true
 });
-app.set('view engine', 'njk');
+app.set('view engine', 'html');
 app.use(express.static('public'));
 
 app.get('/', function(req, res) {

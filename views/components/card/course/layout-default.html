@@ -1,0 +1,40 @@
+<div class="ed-course-box-card ed-mb-30">
+    <div class="ed-img ed-p-10">
+        <a href="#"><img src="{{course.img_url}}" alt="Course Image"></a>
+        <a href="#" class="ed-badge">{{course.badge}}</a>
+    </div>
+    <div class="ed-content">
+        <div class="ed-content-inner ed-p-30 ed-pb-25">
+            <ul class="ed-meta-horizontal-2 ed-mb-20">
+                <li><i class="fal fa-book"></i> {{course.lesson_count}} Lessons</li>
+                <li><i class="fal fa-user"></i> {{course.student_count}} Students</li>
+            </ul>
+            <h6 class="ed-title"><a href="{{course.btn_url}}">{{course.title}}</a></h6>
+            <a href="#" class="ed-transparent-wishlist-btn"><i class="fal fa-heart"></i> Add to wishlist</a>
+        </div>
+        <hr>
+    </div>
+    <div class="ed-rating-bottom-body ed-p-30">
+        <div class="ed-pb-25">
+            <div class="row">
+                <div class="col-xxl-8">
+                    <div class="ed-rarting">
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="label">(5 Reviews)</span>
+                    </div>
+                </div>
+                <div class="col-xxl-4">
+                    <h6 class="ed-price price-danger text-end">{{course.price}}</h6>
+                </div>
+            </div>
+        </div>
+        {% import "components/button/button-full-width.html" as btn %}
+        {{ btn.button("#", "Learn More") }}
+    </div>
+</div>

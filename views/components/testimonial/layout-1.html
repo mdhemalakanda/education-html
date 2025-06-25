@@ -1,0 +1,34 @@
+<div class="ed-testimonial-box {{ testimonial.bg_class }} ed-bg-bottom-right ed-bg-default">
+    <div class="ed-head ed-mb-35">
+        <div class="row">
+            <div class="col-xxl-6">
+                <div class="ed-icon">
+                    <img src="{{ testimonial.logo }}" alt="Testimonial Logo">
+                </div>
+            </div>
+            <div class="col-xxl-6">
+                <div class="ed-rarting justify-content-end">
+                    <div class="rating-stars">
+                        {% for i in range(0, testimonial.rating) %}
+                            <i class="fas fa-star"></i>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ed-body">
+        <p>“{{ testimonial.text }}”</p>
+    </div>
+    <div class="ed-footer">
+        <div class="ed-sm-author-box-2">
+            <div class="ed-img">
+                <img src="{{ testimonial.author_img }}" alt="">
+            </div>
+            <div class="ed-content">
+                <h6 class="ed-title">{{ testimonial.author_name }}</h6>
+                <span class="ed-role">{{ testimonial.author_role }}</span>
+            </div>
+        </div>
+    </div>
+</div>

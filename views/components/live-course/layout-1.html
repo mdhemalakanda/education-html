@@ -1,0 +1,98 @@
+{% set courses = [
+    {
+        badge: "Learning",
+        img_url: "/images/course/course-img-4.jpg",
+        lesson_count: 16,
+        student_count: 38,
+        title: "Machine Learning from Start Finish: Python & Java in Practice.",
+        price: "$300.0",
+        btn_label: "Learn More",
+        btn_url: "#"
+    },
+    {
+        badge: "CSE",
+        img_url: "/images/course/course-img-5.jpg",
+        lesson_count: 16,
+        student_count: 38,
+        title: "Computer Science: Quantitative and Analytical Methods.",
+        price: "$364.0",
+        btn_label: "Learn More",
+        btn_url: "#"
+    },
+    {
+        badge: "Education",
+        img_url: "/images/course/course-img-6.jpg",
+        lesson_count: 6,
+        student_count: 46,
+        title: "Digital Marketing Masterclass + AI & ChatGPT.",
+        price: "$415.0",
+        btn_label: "Learn More",
+        btn_url: "#"
+    },
+    {
+        badge: "Learning",
+        img_url: "/images/course/course-img-1.jpg",
+        lesson_count: 34,
+        student_count: 78,
+        title: "Expert Graphic Design Course Learn High-Quality Design.",
+        price: "$180.0",
+        btn_label: "Learn More",
+        btn_url: "#"
+    },
+    {
+        badge: "Learning",
+        img_url: "/images/course/course-img-2.jpg",
+        lesson_count: 20,
+        student_count: 82,
+        title: "Creating an SEO Business Operated From Home.",
+        price: "$234.0",
+        btn_label: "Learn More",
+        btn_url: "#"
+    },
+    {
+        badge: "Learning",
+        img_url: "/images/course/course-img-3.jpg",
+        lesson_count: 65,
+        student_count: 86 ,
+        title: "Expand person financial being ideas & build principles.",
+        price: "$140.0",
+        btn_label: "Learn More",
+        btn_url: "#"
+    }
+] %}
+
+<!-- live course area start -->
+<section class="live-course-area ed-pt-100">
+    <div class="ed-pl-160 ed-pr-160">
+        <div class="ed-live-course-content-box bg-soft-primary ed-pt-100 ed-pb-80 ed-live-course-content-box-bg ed-bg-default ed-bg-bottom-left">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-xxl-6">
+                        <div class="ed-content">
+                            {% import "components/badge/badge-1.html" as bdg %}
+                            {{ bdg.badge("LIVE COURSES") }}
+                            <h3 class="ed-title ed-mb-20">Live & Learn: Real-Time <br/>Classes.</h3>
+                            <p class="ed-mb-35">Praesent fermentum ullamcorper eros accumsan. Mauris non luctus ante, molestie pellentesque massa. Donec pulvinar diam est, at sodales lorem auctor a. Nullam et tincidunt quam.</p>
+                            {% import "components/button/button-wide.html" as btn %}
+                            {{ btn.button("#", "Learn More") }}
+                        </div>
+                    </div>
+                    <div class="col-xxl-6">
+                        <div class="ed-cross-course-slide-wrapper ms-auto">
+                            <div class="ed-cross-course-slide-active swiper">
+                                <div class="swiper-wrapper">
+                                    {% for course in courses %}
+                                    <div class="swiper-slide">
+                                        {% include "components/card/course/layout-default.html" %}
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- live course area end -->

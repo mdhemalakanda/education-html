@@ -20,9 +20,9 @@
                             <input type="search" name="search" id="search" placeholder="Search Your Course">
                             <button type="submit"><i class="fal fa-search"></i></button>
                         </div>
-                        <a href="#" class="ed-btn">
-                            Free Quote
-                        </a>
+                        {% import "components/button/regular.html" as btn %}
+                        {{ btn.button("#", "Free Quote") }}
+
                     </div>
                 </div>
             </div>
