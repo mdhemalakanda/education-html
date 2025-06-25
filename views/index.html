@@ -66,7 +66,7 @@
         logo: "/images/icons/testimonial-logo-1.png",
         rating: 5,
         bg_class: "ed-bg-1",
-        text: "Mauris ut ex dui. Quisque bibendum posuere ague nam puros malasada suscept urn mantis leo. Maecenas macules locus  imperdiet luctus turpis porta Maecenas posuere ex magna, quis lobortis lacus Praesent nec nisl Donec nec pulvinar urna felis vitae ornare maximus",
+        text: "Mauris ut ex dui. Quisque bibendum posuere augue. Maecenas macules locus imperdiet luctus turpis porta.",
         author_img: "/images/icons/testimonial-author.jpg",
         author_name: "Hanson Deck",
         author_role: "Chief Executive Officer"
@@ -75,16 +75,25 @@
         logo: "/images/icons/testimonial-logo-2.png",
         rating: 5,
         bg_class: "ed-bg-2",
-        text: "Mauris ut ex dui. Quisque bibendum posuere ague nam puros malasada suscept urn mantis leo. Maecenas macules locus  imperdiet luctus turpis porta Maecenas posuere ex magna, quis lobortis lacus Praesent nec nisl Donec nec pulvinar urna felis vitae ornare maximus",
+        text: "Donec nec pulvinar urna. Praesent nec nisl. Maecenas posuere ex magna, quis lobortis lacus.",
         author_img: "/images/icons/testimonial-author.jpg",
-        author_name: "Hanson Deck",
-        author_role: "Chief Executive Officer"
+        author_name: "Jane Smith",
+        author_role: "Head of Marketing"
     },
     {
         logo: "/images/icons/testimonial-logo-3.png",
         rating: 5,
         bg_class: "ed-bg-3",
-        text: "Mauris ut ex dui. Quisque bibendum posuere ague nam puros malasada suscept urn mantis leo. Maecenas macules locus  imperdiet luctus turpis porta Maecenas posuere ex magna, quis lobortis lacus Praesent nec nisl Donec nec pulvinar urna felis vitae ornare maximus",
+        text: "Quisque bibendum posuere augue. Maecenas macules locus imperdiet luctus turpis porta.",
+        author_img: "/images/icons/testimonial-author.jpg",
+        author_name: "Tommy Rivers",
+        author_role: "CTO"
+    },
+    {
+        logo: "/images/icons/testimonial-logo-1.png",
+        rating: 5,
+        bg_class: "ed-bg-1",
+        text: "Mauris ut ex dui. Quisque bibendum posuere augue. Maecenas macules locus imperdiet luctus turpis porta.",
         author_img: "/images/icons/testimonial-author.jpg",
         author_name: "Hanson Deck",
         author_role: "Chief Executive Officer"
@@ -93,20 +102,47 @@
         logo: "/images/icons/testimonial-logo-2.png",
         rating: 5,
         bg_class: "ed-bg-2",
-        text: "Mauris ut ex dui. Quisque bibendum posuere ague nam puros malasada suscept urn mantis leo. Maecenas macules locus  imperdiet luctus turpis porta Maecenas posuere ex magna, quis lobortis lacus Praesent nec nisl Donec nec pulvinar urna felis vitae ornare maximus",
+        text: "Donec nec pulvinar urna. Praesent nec nisl. Maecenas posuere ex magna, quis lobortis lacus.",
         author_img: "/images/icons/testimonial-author.jpg",
-        author_name: "Hanson Deck",
-        author_role: "Chief Executive Officer"
+        author_name: "Jane Smith",
+        author_role: "Head of Marketing"
     },
     {
         logo: "/images/icons/testimonial-logo-3.png",
         rating: 5,
         bg_class: "ed-bg-3",
-        text: "Mauris ut ex dui. Quisque bibendum posuere ague nam puros malasada suscept urn mantis leo. Maecenas macules locus  imperdiet luctus turpis porta Maecenas posuere ex magna, quis lobortis lacus Praesent nec nisl Donec nec pulvinar urna felis vitae ornare maximus",
+        text: "Quisque bibendum posuere augue. Maecenas macules locus imperdiet luctus turpis porta.",
         author_img: "/images/icons/testimonial-author.jpg",
-        author_name: "Hanson Deck",
-        author_role: "Chief Executive Officer"
+        author_name: "Tommy Rivers",
+        author_role: "CTO"
     }
+] %}
+
+{% set faqs = [
+  {
+    id: "accordion-1",
+    question: "Identify your standard questions?",
+    answer: "There are many variations of passages Ut a sem rhonchus at connecter sem lutropins dolor sit amet consectetur adipiscing elit proin leo sem luctus turpis  feugiat convallis diam.fugit convallis diam available.!",
+    expanded: true
+  },
+  {
+    id: "accordion-two",
+    question: "Segment questions by category?",
+    answer: "There are many variations of passages Ut a sem rhonchus at connecter sem lutropins dolor sit amet consectetur adipiscing elit proin leo sem luctus turpis  feugiat convallis diam.fugit convallis diam available.!",
+    expanded: false
+  },
+  {
+    id: "accordion-three",
+    question: "How to choose the perfect class for me?",
+    answer: "There are many variations of passages Ut a sem rhonchus at connecter sem lutropins dolor sit amet consectetur adipiscing elit proin leo sem luctus turpis  feugiat convallis diam.fugit convallis diam available.!",
+    expanded: false
+  },
+  {
+    id: "accordion-four",
+    question: "How does the Affiliate Program run?",
+    answer: "There are many variations of passages Ut a sem rhonchus at connecter sem lutropins dolor sit amet consectetur adipiscing elit proin leo sem luctus turpis  feugiat convallis diam.fugit convallis diam available.!",
+    expanded: false
+  }
 ] %}
 
 
@@ -209,15 +245,52 @@
 </section>
 <!-- testimonial area end -->
 
-<!-- team area start -->
-<div class="ed-team-area">
+<div class="ed-pt-110 ed-pb-125">
+    {% include "components/team/layout-1.html" %}
+</div>
+
+<div class="ed-faq-section">
     <div class="container">
-        <div class="ed-section-title ed-mb-40">
-            <h3 class="ed-title justify-content-center"><img src="/images/icons/team-user.svg" alt=""> Premiers Educators Here</h3>
+        <div class="row">
+            <div class="col-xxl-6">
+                <div class="ed-faq-left-content">
+                    <h3 class="ed-faq-title">Explore Solutions in Our Help FAQ</h3>
+                    <p>Donec in sapien pharetra sollicitudin feugiat. Aenean quis turpis gravida volutpat nibh sit amet rutrum arcu sed venenatis varius faucibus.</p>
+                    <img src="/images/banner/faq.png" alt="Banner">
+                </div>
+            </div>
+            <div class="col-xxl-6">
+                <div class="ed-accordion">
+                    <div class="accordion" id="faqAccordion">
+                    {% for faq in faqs %}
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button 
+                                class="accordion-button{% if not faq.expanded %} collapsed{% endif %}" 
+                                type="button" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#{{ faq.id }}" 
+                                aria-expanded="{{ faq.expanded }}" 
+                                aria-controls="{{ faq.id }}">
+                                {{ faq.question }}
+                                </button>
+                            </h2>
+                            <div 
+                                id="{{ faq.id }}" 
+                                class="accordion-collapse collapse{% if faq.expanded %} show{% endif %}" 
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                {{ faq.answer }}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-<!-- team area end -->
 
 <br><br><br><br><br><br><br><br><br><br>
 

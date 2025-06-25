@@ -1,0 +1,11 @@
+<div class="ed-team-card {{team.class}}">
+    <div class="ed-img">
+        <img src="{{team.image}}" alt="Teacher">
+        {% import "components/socials/social-vertical.html" as  social %}
+        {{ social.socialLinks(team.fb, team.x, team.pt, team.in) }}
+    </div>
+    <div class="ed-content">
+        <h6 class="ed-title"><a href="#">{{team.name}}</a></h6>
+        <span class="ed-role">{{team.role}}</span>
+    </div>
+</div>

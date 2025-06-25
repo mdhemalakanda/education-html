@@ -1,0 +1,60 @@
+
+{% set teamUsers = [
+    {
+        image: "/images/author/teacher-1.png",
+        name: "Alice Nguyen",
+        role: "UX Design Lead",
+        class: "team-bg-1",
+        fb: "#",
+        x: "#",
+        in: "#",
+        pt: "#"
+    },
+    {
+        image: "/images/author/teacher-2.png",
+        name: "Brandon Lee",
+        role: "Frontend Engineer",
+        class: "team-bg-2",
+        fb: "#",
+        x: "#",
+        in: "#",
+        pt: "#"
+    },
+    {
+        image: "/images/author/teacher-3.png",
+        name: "Bartholomew Shoe",
+        role: "UX Design Lead",
+        class: "team-bg-3",
+        fb: "#",
+        x: "#",
+        in: "#",
+        pt: "#"
+    },
+    {
+        image: "/images/author/teacher-4.png",
+        name: "Chaplain Mondoe",
+        role: "Product Manager",
+        class: "team-bg-4",
+        fb: "fb",
+        x: "#",
+        in: "#",
+        pt: "#"
+    }
+] %}
+
+<!-- team area start -->
+<div class="ed-team-area">
+    <div class="container">
+        <div class="ed-section-title ed-mb-40">
+            <h3 class="ed-title justify-content-center"><img src="/images/icons/team-user.svg" alt=""> Premiers Educators Here</h3>
+        </div>
+        <div class="row">
+            {% for team in teamUsers %}
+            <div class="col-xxl-3">
+                {% include "components/card/team/team-default.html" %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- team area end -->

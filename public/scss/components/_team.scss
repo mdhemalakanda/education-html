@@ -1,0 +1,114 @@
+
+.ed-social-vertical {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 8px;
+}
+
+.ed-img {
+    position: relative;
+    .ed-social-vertical {
+        position: absolute;
+        right: -60px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all .3s;
+        & a:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.ed-team-card {
+  text-align: center;
+  overflow: hidden;
+
+  &:hover {
+    .ed-social-vertical {
+        right: 24px
+    }
+  }
+
+  .ed-img {
+    background: linear-gradient(180deg, #FFF 0%, #D8EEC7 100%);
+  }
+
+  .ed-content {
+    background: #D8EEC7;
+    border-top: 3px solid var(--ed-color-white);
+    padding: 20px 10px;
+
+    .ed-title {
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 3px;
+
+      a {
+        display: inline-block;
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+          color: var(--ed-color-primary);
+        }
+      }
+    }
+
+    .ed-role {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ed-color-body);
+    }
+  }
+
+  &.team-bg-2 {
+    .ed-img {
+        background: linear-gradient(180deg, #FFF 0%, #C7DBEE 100%);
+    }
+
+    .ed-content {
+        background-color: var(--ed-color-primary);
+        .ed-title {
+            color: var(--ed-color-white);
+            a:hover {
+                color: var(--ed-color-secondary);
+            }
+        }
+        
+        .ed-role {
+            color: var(--ed-color-white);
+            opacity: 0.8;
+        }
+    }
+  }
+
+  &.team-bg-3 {
+    .ed-img {
+        background: linear-gradient(180deg, #FFF 0%, #F3CFE9 100%);
+    }
+
+    .ed-content {
+        background-color: #F3CFE9;
+    }
+  }
+  
+  &.team-bg-4 {
+    .ed-img {
+        background: linear-gradient(180deg, #FFF 0%, #C4ECE6 100%);
+    }
+
+    .ed-content {
+        background-color: #C4ECE6;
+    }
+  }
+
+  &.team-bg-4 {
+    .ed-img {
+        background: linear-gradient(180deg, #FFF 0%, #C4ECE6 100%);
+    }
+
+    .ed-content {
+        background-color: #C4ECE6;
+    }
+  }
+}
