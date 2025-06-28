@@ -112,3 +112,12 @@
     }
   }
 }
+.ed-team-section-space {
+  padding-top: 110px;
+  padding-bottom: 125px;
+
+  @media #{$xs, $md} {
+    padding-top: 80px;
+    padding-bottom: 70px;
+  }
+}

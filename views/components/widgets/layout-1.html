@@ -1,0 +1,10 @@
+{% macro footerWidget(title='Quick Links', widgetNumber=1, links=[]) %}
+<div class="ed-footer-widget ed-widget-{{ widgetNumber }}">
+    <h6 class="ed-title">{{ title }}</h6>
+    <ul>
+        {% for link in links %}
+            <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endmacro %}

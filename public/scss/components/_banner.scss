@@ -4,13 +4,33 @@
     background-image: url("../images/banner/banner.png");
     background-size: cover;
     background-repeat: no-repeat;
+
+    @media #{$xs} {
+        margin-top: 0;
+        padding: 30px;
+        padding-bottom: 0;
+    }
+
     & .ed-banner-image {
         position: absolute;
         left: calc(50% + 103px);
         bottom: 0;
         transform: translateX(-50%);
+
+        @media #{$md, $lg} {
+            left: 50%;
+        }
+
+        @media #{$xs} {
+            position: static;
+            transform: translateX(0);
+            text-align: center;
+        }
         & img {
             max-width: 530px;
+            @media #{$xs} {
+                width: 100%;
+            }
         }
     }
 }
@@ -18,12 +38,46 @@
 .ed-banner-inner-content {
     position: relative;
     z-index: 1;
+
+    @media #{$xl} {
+        padding: 0 15px;
+    }
+
+    @media #{$xs, $md} {
+        padding: 0;
+    }
 }
 
 .ed-banner-title {
     display: flex;
     justify-content: space-between;
     font-weight: 800;
+
+    @media (min-width: 1600px) and (max-width: 1799px) {
+        font-size: 110px;
+    }
+
+    @media #{$xxl} {
+        font-size: 90px;
+    }
+
+    @media #{$xl} {
+        font-size: 80px;
+    }
+    
+    @media #{$lg} {
+        font-size: 60px;
+    }
+
+    @media #{$md} {
+       font-size: 52px;
+    }
+    
+    @media #{$xs} {
+        font-size: 21px;
+        margin-bottom: 20px;
+    }
+
 }
 
 .ed-meta-horizontal {
@@ -50,6 +104,10 @@
 .ed-banner-course-carousel-active {
     max-width: 610px;
     margin: 0;
+
+    @media #{$xs} {
+        max-width: 100%;
+    }
 }
 
 .ed-banner-carousel-active-wrapper {
@@ -57,34 +115,15 @@
     grid-gap: 20px;
     align-items: center;
     justify-content: flex-end;
-}
 
-.ed-swiper-number-dots {
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-    grid-gap: 8px;
-}
+    @media #{$md, $lg} {
+        justify-content: flex-start;
+    }
 
-.ed-swiper-number-dots > span {
-    background: transparent;
-    opacity: 1;
-    width: 34px;
-    height: 34px;
-    border: 1.5px solid rgba(255, 255, 255, 0.50);
-    text-align: center;
-    line-height: 34px;
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--ed-color-white);
-    cursor: pointer;
-    transition: all .3s;
-}
-
-.ed-swiper-number-dots > span.swiper-pagination-bullet-active {
-    border-color: var(--ed-color-secondary);
-    background: var(--ed-color-secondary);
-    color: var(--ed-color-black);
+    @media #{$xs} {
+        flex-direction: column;
+        grid-gap: 30px;
+    }
 }
 
 .ed-category-banner {
@@ -92,6 +131,11 @@
     position: relative;
     padding: 24px 40px;
     padding-left: 180px;
+
+    @media #{$xs} {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 
     .ed-wide-btn {
         position: relative;
@@ -103,6 +147,10 @@
             width: 153px;
             height: 35px;
             background-image: url("../images/icons/plane.png");
+
+            @media #{$xs} {
+                display: none;
+            }
         }
     }
 
@@ -124,12 +172,18 @@
         position: absolute;
         bottom: 0;
         left: 0;
+
+        @media #{$xs} {
+            display: none;
+        }
     }
 
     .ed-content {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
+        grid-gap: 20px;
     }
 }
 
@@ -139,8 +193,43 @@
     padding-right: 0;
     padding-top: 50px;
     background-repeat: no-repeat;
+
+    @media #{$xs, $md, $lg, $xl} {
+        background-size: cover;
+        padding: 30px;
+    }
+
+    @media #{$xs} {
+        padding: 15px;
+    }
+
+    img {
+        @media #{$xl} {
+            max-height: 181.5px;
+        }
+    }
+
+
     &.bg-2 {
         background-image: url(../images/banner/banner-bg-2.jpg);
+    }
+
+    .ed-course-banner-content {
+        @media #{$xs, $md} {
+            margin-bottom: 30px;
+        }
+    }
+
+    .ed-course-banner-image {
+        @media #{$xs, $md} {
+            padding-right: 0;
+        }
+
+        & img {
+            @media #{$xs} {
+                max-width: 100%;
+            }
+        }
     }
 }
 
@@ -148,10 +237,83 @@
     .ed-title {
         font-weight: 600;
         margin-bottom: 22px;
+
+        @media #{$xs} {
+            font-size: 18px;
+        }
         span {
             font-weight: 400;
             color: var(--ed-color-primary);
             display: block;
         }
     }
+}
+
+.ed-banner-inner-content .ed-inner {
+    @media #{$xs, $xl} {
+        padding-left: 0;
+    }
+}
+
+.ed-course-banner-2-section-space {
+    padding-top: 120px;
+
+    @media #{$xs, $md} {
+        padding-top: 80px;
+    }
+}
+
+.ed-banner-content-2 {
+    .ed-banner-title-2 {
+        font-size: 90px;
+        font-weight: 600;
+        color: var(--ed-color-white);
+        margin-bottom: 20px;
+
+        span {
+            color: var(--ed-color-sweet);
+            display: inline-block;
+        }
+    }
+
+    p {
+        margin: 0;
+        color: rgba(255, 255, 255, .7);
+        margin-bottom: 55px;
+    }
+}
+
+.ed-banner-content-bottom-2 {
+    display: flex;
+    grid-gap: 20px 34px;
+}
+
+.ed-banner-image-box-right {
+  display: inline-block;
+  position: relative;
+
+  img {
+        filter: drop-shadow(0px 10px 60px rgba(5, 12, 31, 0.44));
+  }
+
+  .has-blured-scaleup-animation {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    .ed-play-button {
+        position: relative;
+        z-index: 1;
+    }
+  }
+}
+
+.ed-section-banner-space-2 {
+    padding-top: 83px;
+    padding-bottom: 155px;
+}
+
+.ed-head-banner-bg-wrapper {
+    background-image: url("../images/background/banner-shape.png");
+    background-size: cover;
 }

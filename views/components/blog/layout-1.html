@@ -1,0 +1,63 @@
+<section class="blog-area ed-bg-soft-primary ed-blog-section-space">
+    <div class="container">
+        <div class="container">
+            <div class="row ed-pb-50">
+                <div class="col-xxl-6">
+                    <div class="ed-section-title text-center mb-3 mb-lg-0">
+                        <h3 class="ed-title justify-content-center justify-content-lg-start"><img src="/images/icons/news.svg" alt=""> Latest News & Blogs</h3>
+                    </div>
+                </div>
+                <div class="col-xxl-6">
+                    <div class="text-center text-lg-end mt-3 mt-md-0">
+                        {% import "components/button/button-wide.html" as btn %}
+                        {{ btn.button('#', 'View all Blogs') }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="ed-blog-content">
+                <div class="ed-blog-active swiper">
+                    <div class="swiper-wrapper ed-pb-50">
+                        <div class="swiper-slide">
+                            {% import "components/card/blog/layout-1.html" as blog_default %}
+                            {% set postMeta = [
+                                { icon: "fal fa-user", label: "Alan Fresco", url: "#" },
+                                { icon: "fal fa-comments", label: "5 Comments", url: "#" }
+                            ] %}
+                            {{ blog_default.blog('Discovering the Value Bilingual of Instruction...', '/images/blog/blog-img-1.jpg', 'March 16, 2024', postMeta) }}
+
+                        </div>
+                        <div class="swiper-slide">
+                            {% import "components/card/blog/layout-1.html" as blog_default %}
+                            {% set postMeta = [
+                                { icon: "fal fa-user", label: "John Doe", url: "#" },
+                                { icon: "fal fa-comments", label: "3 Comments", url: "#" }
+                            ] %}
+                            {{ blog_default.blog('Discovering the Value Bilingual of Instruction...', '/images/blog/blog-img-2.jpg', 'March 16, 2025', postMeta) }}
+
+                        </div>
+                        <div class="swiper-slide">
+                            {% import "components/card/blog/layout-1.html" as blog_default %}
+                            {% set postMeta = [
+                                { icon: "fal fa-user", label: "Alan Fresco", url: "#" },
+                                { icon: "fal fa-comments", label: "5 Comments", url: "#" }
+                            ] %}
+                            {{ blog_default.blog('Discovering the Value Bilingual of Instruction...', '/images/blog/blog-img-1.jpg', 'March 16, 2024', postMeta) }}
+
+                        </div>
+                        <div class="swiper-slide">
+                            {% import "components/card/blog/layout-1.html" as blog_default %}
+                            {% set postMeta = [
+                                { icon: "fal fa-user", label: "John Doe", url: "#" },
+                                { icon: "fal fa-comments", label: "3 Comments", url: "#" }
+                            ] %}
+                            {{ blog_default.blog('Discovering the Value Bilingual of Instruction...', '/images/blog/blog-img-2.jpg', 'March 16, 2025', postMeta) }}
+
+                        </div>
+                    </div>
+                    <div class="ed-blog-swiper-pagination ed-pagination-default text-center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -59,7 +59,11 @@ h6, .ed-h6 {
 }
 
 .row {
-    --bs-gutter-x: 30px;
+  --bs-gutter-x: 30px;
+
+  &.g-0 {
+    --bs-gutter-x: 0;
+  }
 }
 
 a, button {
@@ -87,8 +91,37 @@ input[type="search"]::-webkit-search-results-decoration {
   background-position: bottom right;
 }
 
+.ed-bg-soft-primary {
+  background-color: var(--ed-color-soft-primary);
+}
+
+.ed-fix {
+  overflow: hidden;
+}
+
+.ed-bg-black {
+  background-color: var(--ed-color-black) !important;
+}
+
 .ed-bg-primary {
-  background-color: var(--ed-color-primary);
+  background-color: var(--ed-color-primary) !important;
+}
+
+.ed-bg-success-soft {
+  background-color: var(--ed-color-success-soft) !important;
+}
+.ed-bg-warning-soft {
+  background-color: var(--ed-color-warning-soft) !important;
+}
+.ed-bg-pending-soft {
+  background-color: var(--ed-color-pending-soft) !important;
+}
+
+// Layout.
+.ed-container-wide-2 {
+  max-width: 1630px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 @for $i from 0 through 300 {

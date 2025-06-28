@@ -1,0 +1,43 @@
+
+<div class="ed-faq-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-6 col-sm-5 col-md-6">
+                <div class="ed-faq-left-content">
+                    <h3 class="ed-faq-title">Explore Solutions in Our Help FAQ</h3>
+                    <p>Donec in sapien pharetra sollicitudin feugiat. Aenean quis turpis gravida volutpat nibh sit amet rutrum arcu sed venenatis varius faucibus.</p>
+                    <img src="/images/banner/faq.png" alt="Banner">
+                </div>
+            </div>
+            <div class="col-xxl-6 col-sm-7 col-md-6">
+                <div class="ed-accordion">
+                    <div class="accordion" id="faqAccordion">
+                    {% for faq in faqs %}
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button 
+                                class="accordion-button{% if not faq.expanded %} collapsed{% endif %}" 
+                                type="button" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#{{ faq.id }}" 
+                                aria-expanded="{{ faq.expanded }}" 
+                                aria-controls="{{ faq.id }}">
+                                {{ faq.question }}
+                                </button>
+                            </h2>
+                            <div 
+                                id="{{ faq.id }}" 
+                                class="accordion-collapse collapse{% if faq.expanded %} show{% endif %}" 
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                {{ faq.answer }}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

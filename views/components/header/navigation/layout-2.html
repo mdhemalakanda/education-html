@@ -1,0 +1,11 @@
+{% macro navMenu(items) %}
+<div class="ed-nav-menu-2 text-center">
+  <ul>
+    {% for item in items %}
+      <li {% if item.dropdown %}class="has-dropdown"{% endif %}>
+        <a href="{{ item.href }}">{{ item.label }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endmacro %}

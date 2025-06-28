@@ -1,0 +1,18 @@
+{% macro contactList(items) %}
+<ul class="ed-list-horizontal">
+    {% for item in items %}
+        {% if item.type == 'mailto' %}
+            {% set hrefPrefix = 'mailto:' %}
+        {% elseif item.type == 'tel' %}
+            {% set hrefPrefix = 'tel:' %}
+        {% else %}
+            {% set hrefPrefix = '' %}
+        {% endif %}
+        <li>
+            <a href="{{ hrefPrefix }}{{ item.value }}">
+                <i class="{{ item.icon }}"></i> {{ item.label }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+{% endmacro %}

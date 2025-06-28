@@ -1,0 +1,21 @@
+{% macro googleRating(label, activeCount) %}
+<div class="ed-google-rating-box">
+    <div class="ed-icon">
+        <img src="/images/icons/google.svg" alt="Google">
+    </div>
+    <div class="ed-content">
+        <div class="ed-rarting">
+            <div class="rating-stars">
+                 {% for i in range(0, 5) %}
+                    {% if i < activeCount %}
+                        <i class="fas fa-star active"></i>
+                    {% else %}
+                        <i class="fas fa-star"></i>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <span class="text-white">4.8 Rating on Google</span>
+    </div>
+</div>
+{% endmacro %}

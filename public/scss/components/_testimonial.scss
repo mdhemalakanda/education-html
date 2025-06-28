@@ -1,5 +1,9 @@
 .ed-testimonial-box {
     padding: 45px 35px;
+
+    @media #{$xs} {
+        padding: 30px;
+    }
     &.ed-bg-1 {
         background-image: url(../images/background/testimonial-bg-1.jpg);
     }
@@ -13,6 +17,20 @@
     .ed-body {
         p {
             font-size: 16px;
+        }
+    }
+
+    .ed-head {
+        @media #{$xs} {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.ed-testimonial-area {
+    .ed-testimonial-banner {
+        @media #{$xs} {
+            margin-top: 20px;
         }
     }
 }
@@ -62,4 +80,16 @@
   max-width: 850px;
   margin-left: auto;
   margin-right: auto;
+
+  @media #{$xs, $md, $lg} {
+    padding: 25px 20px;
+  }
+}
+
+.ed-testimonial-section-space {
+    padding-top: 110px;
+
+    @media #{$xs, $md} {
+        padding-top: 80px;
+    }
 }

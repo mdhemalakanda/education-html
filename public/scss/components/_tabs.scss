@@ -4,6 +4,12 @@
     grid-gap: 30px 40px;
     width: fit-content;
 
+    @media #{$xs} {
+        overflow-x: auto;
+        overflow-y: hidden;
+        max-width: 100%;
+    }
+
     & button {
         border: 0;
         background: transparent;
@@ -11,6 +17,10 @@
         font-weight: 500;
         position: relative;
         color: var(--ed-color-body);
+        @media #{$xs} {
+            flex: 0 0 fit-content;
+        }
+
         &::after , &.active::after {
             position: absolute;
             right: 0;

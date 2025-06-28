@@ -18,8 +18,19 @@
     });
 
     const crossSlideActive = new Swiper('.ed-cross-course-slide-active', {
-       effect: "cards",
+        effect: "cards",
         grabCursor: true,
+        breakpoints: {
+            0: {
+                effect: "fade",
+            },
+            991: {
+                effect: "fade"
+            },
+            992: {
+                effect: "cards"
+            }
+        }
     });
 
     const testimonialSwiper = new Swiper('.ed-testimonial-active', {
@@ -36,13 +47,82 @@
             clickable: true,
         },
         breakpoints: {
-        768: {
-            slidesPerView: 2,
-        },
-        1024: {
-            slidesPerView: 3,
-        }
+            575: {
+                slidesPerView: 1,
+            },
+            767: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            992: {
+                slidesPerView: 2
+            },
+            1200: {
+                slidesPerView: 3
+            }
         }
     });
+
+    // team activation.
+    const teamActive = new Swiper('.ed-team-active', {
+        loop: true,
+        spaceBetween: 30,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".ed-team-swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            575: {
+                slidesPerView: 1,
+            },
+            767: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 2
+            },
+            992: {
+                slidesPerView: 3
+            },
+            1200: {
+                slidesPerView: 3
+            },
+            1400: {
+                slidesPerView: 4
+            }
+        }
+    });
+
+    // team activation.
+    const blogActive = new Swiper('.ed-blog-active', {
+        loop: true,
+        spaceBetween: 30,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".ed-blog-swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            575: {
+                slidesPerView: 1,
+            },
+            767: {
+                slidesPerView: 2,
+            },
+            992: {
+                slidesPerView: 2
+            }
+        }
+    });
+
 
 })(jQuery)

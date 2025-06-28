@@ -1,0 +1,99 @@
+<footer class="ed-footer-1 ed-bg-black ed-fix ed-footer-section-space">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xxl-4 col-lg-4">
+                <div class="ed-footer-widget-about-1">
+                    <div class="ed-logo">
+                        <a href="#"><img src="/images/logo-white.png" alt="Logo"></a>
+                    </div>
+                    <div class="ed-content">
+                        <p>Present Fermentum Tullamore eros accusing marris non locus ante.</p>
+                        {% import "components/form/form-subscribe.html" as subscribe_form %}
+                        {{ subscribe_form.subscribe() }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xxl-8 col-lg-8">
+                <div class="ed-footer-widget-right ed-pl-40">
+                    <div class="row">
+                        <div class="col-xxl-4 col-sm-4">
+                            {% import "components/widgets/layout-1.html" as widget %}
+
+                            {% set quickLinks = [
+                                { label: "Marketplace", url: "#" },
+                                { label: "Contact Us", url: "#" },
+                                { label: "CNews & Blog", url: "#" },
+                                { label: "Courses", url: "#" },
+                                { label: "Registration", url: "#" }
+                            ] %}
+
+                            {{ widget.footerWidget("Quick Links", 1, quickLinks) }}
+                        </div>
+                        <div class="col-xxl-4 col-sm-4">
+                            {% import "components/widgets/layout-1.html" as widget %}
+
+                            {% set companyLinks = [
+                                { label: "About Us", url: "#" },
+                                { label: "Instructor", url: "#" },
+                                { label: "Privacy Policy", url: "#" },
+                                { label: "FAQs", url: "#" },
+                                { label: "Kindergarten", url: "#" }
+                            ] %}
+
+                            {{ widget.footerWidget("Our Company", 2, companyLinks) }}
+
+                        </div>
+                        <div class="col-xxl-4 col-sm-4">
+                            {% import "components/widgets/layout-1.html" as widget %}
+
+                            {% set learningLinks = [
+                                { label: "Media Relations", url: "#" },
+                                { label: "Business Strategy", url: "#" },
+                                { label: "Become A Teacher", url: "#" },
+                                { label: "Project Management", url: "#" },
+                                { label: "Membership", url: "#" }
+                            ] %}
+
+                            {{ widget.footerWidget("Learning", 3, learningLinks) }}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ed-copyright-area">
+            <div class="row align-items-center">
+                <div class="col-xxl-4 col-sm-6 col-md-5">
+                    <p>© 2025 <a href="#">EduClass</a>. All rights reserved.</p>
+                </div>
+                <div class="col-xxl-8 col-sm-6 col-md-7">
+                    {% import "components/socials/social-horizontal-wide.html" as social %}
+
+                    {% set socialItems = [
+                        {
+                            label: "Facebook",
+                            url: "#",
+                            svg: "/images/icons/facebook.svg"
+                        },
+                        {
+                            label: "Twitter",
+                            url: "#",
+                            svg: "/images/icons/twitter.svg"
+                        },
+                        {
+                            label: "Pinterest",
+                            url: "#",
+                            svg: "/images/icons/pinterest.svg"
+                        }
+                    ] %}
+
+                    {{ social.socialIcons(socialItems) }}
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

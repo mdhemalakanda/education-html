@@ -4,7 +4,7 @@
         img_url: "/images/course/course-img-4.jpg",
         lesson_count: 16,
         student_count: 38,
-        title: "Machine Learning from Start Finish: Python & Java in Practice.",
+        title: "Machine Learning from Start Finish: Python & Java.",
         price: "$300.0",
         btn_label: "Learn More",
         btn_url: "#"
@@ -62,23 +62,23 @@
 ] %}
 
 <!-- live course area start -->
-<section class="live-course-area ed-pt-100">
-    <div class="ed-pl-160 ed-pr-160">
-        <div class="ed-live-course-content-box bg-soft-primary ed-pt-100 ed-pb-80 ed-live-course-content-box-bg ed-bg-default ed-bg-bottom-left">
+<section class="ed-live-course-area ed-live-course-section-space">
+    <div class="ed-pl-160 ed-pr-160 ed-live-course-main-space">
+        <div class="ed-live-course-content-box bg-soft-primary ed-live-course-section-inner-space ed-live-course-content-box-bg ed-bg-default ed-bg-bottom-left">
             <div class="container">
                 <div class="row align-items-center justify-content-between">
-                    <div class="col-xxl-6">
-                        <div class="ed-content">
-                            {% import "components/badge/badge-1.html" as bdg %}
+                    <div class="col-xxl-6 col-sm-6">
+                        <div class="ed-live-course-content-top">
+                            {% import "components/badge/badge-dotted.html" as bdg %}
                             {{ bdg.badge("LIVE COURSES") }}
                             <h3 class="ed-title ed-mb-20">Live & Learn: Real-Time <br/>Classes.</h3>
-                            <p class="ed-mb-35">Praesent fermentum ullamcorper eros accumsan. Mauris non luctus ante, molestie pellentesque massa. Donec pulvinar diam est, at sodales lorem auctor a. Nullam et tincidunt quam.</p>
+                            <p>Praesent fermentum ullamcorper eros accumsan. Mauris non luctus ante, molestie pellentesque massa. Donec pulvinar diam est, at sodales lorem auctor a. Nullam et tincidunt quam.</p>
                             {% import "components/button/button-wide.html" as btn %}
                             {{ btn.button("#", "Learn More") }}
                         </div>
                     </div>
-                    <div class="col-xxl-6">
-                        <div class="ed-cross-course-slide-wrapper ms-auto">
+                    <div class="col-xxl-6 col-sm-6">
+                        <div class="ed-cross-course-slide-wrapper ms-xxl-auto">
                             <div class="ed-cross-course-slide-active swiper">
                                 <div class="swiper-wrapper">
                                     {% for course in courses %}

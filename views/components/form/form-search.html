@@ -1,0 +1,13 @@
+{% macro searchForm(name, id, placeholder) %}
+<form class="ed-form-search">
+  <input
+    type="search"
+    name="{{ name }}"
+    id="{{ id }}"
+    placeholder="{{ placeholder }}"
+  >
+  <button type="button">
+    <i class="fal fa-search"></i>
+  </button>
+</form>
+{% endmacro %}

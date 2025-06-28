@@ -6,6 +6,11 @@
   text-decoration: none;
   color: var(--ed-color-black);
 
+  @media #{$xs} {
+    padding: 3px 10px;
+    font-size: 14px;
+  }
+
   &.ed-badge-danger {
     background-color: var(--ed-color-danger);
     color: var(--ed-color-white);
@@ -26,5 +31,58 @@
   &:hover {
     background: var(--ed-color-primary);
     color: var(--ed-color-white);
+  }
+}
+
+.ed-badge-date {
+  background: var(--ed-color-secondary);
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 36px;
+  
+  i {
+    font-size: 21px;
+    display: inline-block;
+    padding: 8px 12px;
+    border-right: 1px solid rgba(5, 12, 31, 0.14);
+  }
+
+  span {
+    padding: 0 14px;
+    font-weight: 500;
+    font-size: 15px;
+  }
+}
+
+.ed-meta-transparent-group {
+  .ed-meta-icon {
+    display: inline-block;
+    font-size: 19px;
+    color: var(--ed-color-primary);
+  }
+
+  .ed-meta-content {
+    display: inline-block;
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--ed-color-body);
+
+      &:hover {
+        color: var(--ed-color-primary);
+      }
+    }
+  }
+
+  .ed-meta-item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
   }
 }

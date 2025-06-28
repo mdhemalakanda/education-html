@@ -1,12 +1,39 @@
 .ed-faq-left-content {
   padding-right: 60px;
 
+   @media #{$xs} {
+    padding-right: 0;
+    margin-bottom: 50px;
+  }
+
   .ed-faq-title {
     margin-bottom: 17px;
+
+    @media #{$md} {
+      font-size: 30px;
+    }
+
+    @media #{$xs} {
+      font-size: 25px;
+    }
   }
 
   p {
     font-size: 15px;
     margin-bottom: 60px;
+
+    @media #{$xs} {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+
+
+.ed-faq-section-space {
+  padding-bottom: 120px;
+
+  @media #{$md} {
+    padding-bottom: 80px;
   }
 }

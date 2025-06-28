@@ -1,0 +1,94 @@
+.ed-footer-widget-about-1 {
+  .ed-content {
+    p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 16px;
+    }
+  }
+
+  .ed-logo {
+    margin-bottom: 21px;
+  }
+
+  .ed-subscribe-form-input-area {
+      margin-bottom: 15px;
+  }
+}
+
+@keyframes scrollToBotom {
+    0% {
+        top: -46px
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+.ed-footer-1 {
+    .ed-footer-widget-right {
+        border-left: 1px solid #323746;
+        position: relative;
+
+        @media #{$xs, $md, $lg} {
+          padding-left: 0;
+          border-left: 0;
+          padding-top: 60px;
+        }
+
+        &::before {
+          height: 49.75px;
+          width: 3px;
+          content: "";
+          background-image: url("data:image/svg+xml,%3Csvg%20width%3D%222%22%20height%3D%2274%22%20viewBox%3D%220%200%202%2074%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1%2072.3553V1.64466%22%20stroke%3D%22url(%23paint0_linear_1_545)%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%20stroke-linecap%3D%22round%22%2F%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22paint0_linear_1_545%22%20x1%3D%2218.8571%22%20y1%3D%2218.9616%22%20x2%3D%22-17.2179%22%20y2%3D%2254.674%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%2314717D%22%20stop-opacity%3D%220%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22white%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3C%2Fsvg%3E");
+          position: absolute;
+          left: -2px;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+          animation-name: scrollToBotom;
+          animation-duration: 5s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+
+          @media #{$xs, $md, $lg} {
+            display: none;
+          }
+        }
+
+
+        .ed-footer-widget {
+          padding-top: 120px;
+          padding-bottom: 120px;
+          position: relative;
+
+          @media #{$xs, $md, $lg} {
+            padding-top: 0;
+            padding-bottom: 40px;
+          }
+        }
+    }
+}
+
+.ed-copyright-area {
+  p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0;
+
+    @media #{$xs, $md, $lg} {
+      margin-bottom: 0;
+    }
+
+    @media #{$sm} {
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: var(--ed-color-secondary);
+    }
+  }
+}
+
+.ed-footer-section-space {
+  @media #{$xs, $md, $lg} {
+    padding-top: 80px;
+  }
+}

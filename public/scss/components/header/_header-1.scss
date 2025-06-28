@@ -1,6 +1,10 @@
-header.ed-header-area {
+.ed-header-area {
     position: relative;
     z-index: 1;
+
+    @media #{$xs} {
+        display: none;
+    }
 }
 
 .ed-logo {
@@ -153,6 +157,10 @@ header.ed-header-area {
 
 .ed-header-menu-area {
     background-color: var(--ed-color-black);
+
+    .ed-header-nav {
+        padding-left: 20px;
+    }
 }
 
 .ed-header-nav {
@@ -166,6 +174,20 @@ header.ed-header-area {
                 padding: 23px 30px;
                 display: inline-block;
                 border-right: 1px solid rgba(255, 255, 255, 0.20);
+
+                @media #{$xl} {
+                    padding: 23px 22px;
+                }
+
+                @media #{$lg} {
+                    padding: 23px 15px;
+                }
+
+                @media #{$md} {
+                    padding: 23px 5px;
+                    border: 0;
+                }
+
                 &:hover {
                     color: var(--ed-color-secondary);
                 }
@@ -205,8 +227,17 @@ header.ed-header-area {
     justify-content: flex-end;
     padding-right: 10px;
 
+    @media #{$md} {
+        gap: 0 20px;
+    }
+
   .ed-btn {
     position: relative;
+
+    @media #{$md, $lg} {
+        min-width: 144px;
+    }
+
     &::before {
       content: "";
       position: absolute;

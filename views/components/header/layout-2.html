@@ -1,0 +1,86 @@
+<!-- header area start -->
+<header class="ed-header-area-2">
+    <div class="ed-container-wide-2">
+        <div class="ed-header-2-main-wrapper">
+            <div class="ed-header-nav-2">
+                <div class="row align-items-center">
+                    <div class="col-xxl-2">
+                        <div class="ed-logo-2">
+                            <a href="/">
+                                <img src="/images/logo-white.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xxl-6">
+                        {% import "components/header/navigation/layout-2.html" as nav %}
+
+                        {% set navItems = [
+                            { "label": "Demo", "href": "#", "dropdown": true },
+                            { "label": "Pages", "href": "#", "dropdown": true },
+                            { "label": "Courses", "href": "#", "dropdown": true },
+                            { "label": "Dashboard", "href": "#", "dropdown": true },
+                            { "label": "Blog", "href": "#", "dropdown": false },
+                            { "label": "eCommerce", "href": "#", "dropdown": false }
+                        ] %}
+
+                        {{ nav.navMenu(navItems) }}
+
+                    </div>
+                    <div class="col-xxl-4">
+                        <div class="ed-header-right-2 justify-content-end">
+                            {% import "components/form/form-search.html" as forms %}
+                            {{ forms.searchForm("search", "search", "Search...") }}
+                            <!-- end search form -->
+
+                            {% import "components/socials/social-horizontal.html" as macros %}
+                            {% set socialItems = [
+                            { url: "#", bgClass: "bg-facebook", iconName: "facebook-f" },
+                            { url: "#", bgClass: "bg-twitter", iconName: "twitter" },
+                            { url: "#", bgClass: "bg-linkedin", iconName: "linkedin-in" },
+                            { url: "#", bgClass: "bg-pinterest", iconName: "pinterest" }
+                            ] %}
+                            {{ macros.socialLinks(socialItems) }}
+                            <!-- end social links -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-xxl-6">
+                    <div class="ed-header-bottom-2">
+                        {% import "components/contact/contact-info-1.html" as macros %}
+
+                        {% set contacts = [
+                            {
+                                type: "mailto",
+                                icon: "fal fa-envelope",
+                                value: "example@gmail.com",
+                                label: "example@gmail.com"
+                            },
+                            {
+                                type: "tel",
+                                icon: "fal fa-phone-plus",
+                                value: "+8805768564622",
+                                label: "[088] 5768 564 622"
+                            }
+                        ] %}
+
+                        {{ macros.contactList(contacts) }}
+                    </div>
+                </div>
+                <div class="col-xxl-6">
+                    <div class="ed-header-bottom-right-2 text-end">
+                        {% include "components/header/components/header-actions.html" %}
+                        <!-- end actions -->
+
+                        {% import "components/button/button-wide-md.html" as btn %}
+                        {{ btn.wideButton('/get-a-quote', 'Free Quote', true) }}
+                        <!-- end button -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- header area end -->

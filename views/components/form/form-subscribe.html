@@ -1,0 +1,22 @@
+{% macro subscribe(
+        label='I agree to the <a href=\'#\'>Privacy Policy</a>.', 
+        placeholder='Your email', 
+        buttonText='Subscribe', 
+        formAction='post', 
+        inputId='email', 
+        checkboxId='email_check'
+    )
+%}
+<form action="{{ formAction }}" class="ed-subscribe-form">
+    <div class="ed-subscribe-form-input-area">
+        <input type="email" name="email" placeholder="{{ placeholder }}" id="{{ inputId }}">
+        <button class="ed-wite-btn-sm" type="button">{{ buttonText }}</button>
+    </div>
+    <div class="ed-subscribe-form-input-label">
+        <input type="checkbox" id="{{ checkboxId }}">
+        <label for="{{ checkboxId }}">
+            {{ label | safe }}
+        </label>
+    </div>
+</form>
+{% endmacro %}

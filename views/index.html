@@ -34,7 +34,7 @@
         img_url: "/images/course/course-img-4.jpg",
         lesson_count: 16,
         student_count: 38,
-        title: "Machine Learning from Start Finish: Python & Java in Practice.",
+        title: "Machine Learning from Start Finish: Python & Java.",
         price: "$300.0",
         btn_label: "Learn More",
         btn_url: "#"
@@ -162,16 +162,16 @@
 {% include "components/category/layout-1.html" %}
 
 <!-- related course area start -->
-<section class="related-course-area bg-soft-primary ed-pt-95 ed-pb-90">
+<section class="related-course-area bg-soft-primary ed-related-course-section">
     <div class="container">
         <div class="row align-items-center ed-pb-45">
-            <div class="col-xxl-6">
+            <div class="col-xxl-6 col-lg-6">
                 <div class="ed-section-title text-center">
-                    <h3 class="ed-title justify-content-start"><img src="/images/icons/book.svg" alt=""> Rated Learning Tutorials</h3>
+                    <h3 class="ed-title justify-content-center justify-content-lg-start"><img src="/images/icons/book.svg" alt=""> Rated Learning Tutorials</h3>
                 </div>
             </div>
-            <div class="col-xxl-6">
-                <div class="ed-course-menu-tabs ms-auto">
+            <div class="col-xxl-6 col-lg-6">
+                <div class="ed-course-menu-tabs">
                     <button>UI/UX Design</button>
                     <button class="active">Development</button>
                     <button>Marketing</button>
@@ -183,7 +183,7 @@
         <div class="ed-related-course-wrapper">
             <div class="row">
                 {% for course in courses %}
-                <div class="col-xxl-4">
+                <div class="col-xxl-4 col-xl-4 col-sm-6">
                     <div class="ed-mb-30">
                         {% include "components/card/course/layout-default.html" %}
                     </div>
@@ -196,14 +196,16 @@
 <!-- related course area end -->
 
 <!-- course banner 2 start -->
-<div class="ed-course-banner-2 ed-pt-120">
+<div class="ed-course-banner-2 ed-course-banner-2-section-space">
     <div class="container">
         <div class="row">
-            <div class="col-xxl-6">
-                {% import "components/banner/layout-2.html" as banner_component %}
-                {{ banner_component.banner('', '<span>DIGITAL</span> Classes by History', '/images/banner/banner-img-1.png') }}
+            <div class="col-xxl-6 col-sm-6">
+                <div class="ed-mb-30 mb-lg-0">
+                    {% import "components/banner/layout-2.html" as banner_component %}
+                    {{ banner_component.banner('', '<span>DIGITAL</span> Classes by History', '/images/banner/banner-img-1.png') }}
+                </div>
             </div>
-            <div class="col-xxl-6">
+            <div class="col-xxl-6 col-sm-6">
                 {% import "components/banner/layout-2.html" as banner_component2 %}
                 {{ banner_component2.banner('bg-2', '<span>DIGITAL</span> Classes by History', '/images/banner/banner-img-2.png', 'ed-btn-purple') }}
             </div>
@@ -215,7 +217,7 @@
 {% include "components/live-course/layout-1.html" %}
 
 <!-- testimonial area start -->
-<section class="ed-testimonial-area ed-pt-110">
+<section class="ed-testimonial-area ed-testimonial-section-space">
     <div class="container">
         <div class="ed-section-title ed-mb-40"><h3 class="ed-title d-block text-center">Learn
             <div class="ed-avatar-group">
@@ -245,54 +247,14 @@
 </section>
 <!-- testimonial area end -->
 
-<div class="ed-pt-110 ed-pb-125">
+<div class="ed-team-section-space">
     {% include "components/team/layout-1.html" %}
 </div>
-
-<div class="ed-faq-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-xxl-6">
-                <div class="ed-faq-left-content">
-                    <h3 class="ed-faq-title">Explore Solutions in Our Help FAQ</h3>
-                    <p>Donec in sapien pharetra sollicitudin feugiat. Aenean quis turpis gravida volutpat nibh sit amet rutrum arcu sed venenatis varius faucibus.</p>
-                    <img src="/images/banner/faq.png" alt="Banner">
-                </div>
-            </div>
-            <div class="col-xxl-6">
-                <div class="ed-accordion">
-                    <div class="accordion" id="faqAccordion">
-                    {% for faq in faqs %}
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button 
-                                class="accordion-button{% if not faq.expanded %} collapsed{% endif %}" 
-                                type="button" 
-                                data-bs-toggle="collapse" 
-                                data-bs-target="#{{ faq.id }}" 
-                                aria-expanded="{{ faq.expanded }}" 
-                                aria-controls="{{ faq.id }}">
-                                {{ faq.question }}
-                                </button>
-                            </h2>
-                            <div 
-                                id="{{ faq.id }}" 
-                                class="accordion-collapse collapse{% if faq.expanded %} show{% endif %}" 
-                                data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                {{ faq.answer }}
-                                </div>
-                            </div>
-                        </div>
-                    {% endfor %}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="ed-faq-section-space">
+    {% include "components/faq/layout-1.html" %}
 </div>
-
-<br><br><br><br><br><br><br><br><br><br>
+{% include "components/blog/layout-1.html" %}
+{% include "components/footer/layout-1.html" %}
 
 {% include "partials/scripts.html" %}
 </body>

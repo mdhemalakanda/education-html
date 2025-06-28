@@ -1,0 +1,23 @@
+.ed-related-course-wrapper .row *:last-child .ed-mb-30 {
+    @media #{$xs} {
+        margin-bottom: 0;
+    }
+}
+
+.ed-related-course-section {
+    padding-top: 95px;
+    padding-bottom: 90px;
+
+    @media #{$xs, $md} {
+        padding-bottom: 50px;
+        padding-top: 80px;
+    }
+
+    .ed-course-menu-tabs {
+        margin-left: auto;
+
+        @media #{$xs, $md} {
+            margin-right: auto;;
+        }
+    }
+}

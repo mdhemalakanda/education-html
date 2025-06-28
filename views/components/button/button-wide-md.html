@@ -1,0 +1,8 @@
+{% macro wideButton(url, label, showArrow=true) %}
+  <a href="{{ url }}" class="ed-md-wide-btn">
+    {{ label }}
+    {% if showArrow %}
+      <i class="fal fa-arrow-right"></i>
+    {% endif %}
+  </a>
+{% endmacro %}

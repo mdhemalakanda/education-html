@@ -14,6 +14,9 @@ app.use(express.static('public'));
 app.get('/', function(req, res) {
     res.render('index', { site_title: 'EduClass - An Online Education Template.'} );
 });
+app.get('/online-class', function(req, res) {
+    res.render('index-2', { site_title: 'EduClass - An Online Education Template.'} );
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, function() {

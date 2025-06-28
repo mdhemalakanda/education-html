@@ -1,15 +1,15 @@
 {% macro banner(bg_class, title, img_url, btn_class = '') %}
 <div class="ed-course-banner-2-box {{ bg_class }}">
     <div class="row">
-        <div class="col-xxl-6">
+        <div class="col-xxl-6 col-xl-6">
             <div class="ed-course-banner-content">
                 <h4 class="ed-title">{{ title | safe }}</h4>
                 {% import "components/button/button-wide.html" as btn %}
                 {{ btn.button("#", "Learn More", btn_class) }}
             </div>
         </div>
-        <div class="col-xxl-6">
-            <div class="ed-course-banner-image text-end ed-pr-60">
+        <div class="col-xxl-6 col-xl-6">
+            <div class="ed-course-banner-image text-lg-end ed-pr-60">
                 <img src="{{ img_url }}" alt="Banner Image">
             </div>
         </div>

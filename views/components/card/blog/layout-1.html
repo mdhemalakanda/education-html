@@ -1,0 +1,16 @@
+{% macro blog(title, image_url, date, postMeta) %}
+<div class="ed-blog-card">
+    <div class="ed-image">
+        <img src="{{ image_url }}" alt="Blog Image">
+    </div>
+    <div class="ed-content">
+        {% import "components/badge/badge-date.html" as bdg %}
+        {{ bdg.badge(date, 'calendar') }}
+
+        {% import "components/meta/meta-transparent.html" as meta %}
+        {{ meta.renderMeta(postMeta) }}
+
+        <h6 class="ed-title"><a href="#">{{ title }}</a></h6>
+    </div>
+</div>
+{% endmacro %}

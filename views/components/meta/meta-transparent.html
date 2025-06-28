@@ -1,0 +1,14 @@
+{% macro renderMeta(metaItems) %}
+<div class="ed-meta-transparent-group">
+  {% for item in metaItems %}
+    <div class="ed-meta-item">
+      <div class="ed-meta-icon">
+        <i class="{{ item.icon }}"></i>
+      </div>
+      <div class="ed-meta-content">
+        <a href="{{ item.url or '#' }}">{{ item.label }}</a>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endmacro %}

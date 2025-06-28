@@ -1,0 +1,27 @@
+.ed-footer-widget {
+  .ed-title {
+    font-size: 20px;
+    color: var(--ed-color-white);
+    margin-bottom: 28px;
+  }
+
+  ul {
+    li {
+      list-style: none;
+      
+      &:not(:last-child) {
+        margin-bottom: 14px;
+      }
+
+      a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.7);
+
+        &:hover {
+          color: var(--ed-color-secondary);
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,119 @@
+
+.ed-subscribe-form {
+    .ed-subscribe-form-input-area {
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 5px;
+      display: flex;
+
+      input {
+        flex-grow: 1;
+        border: 0;
+        padding-left: 15px;
+        background: transparent;
+        font-size: 15px;
+        color: rgba(255, 255, 255, 0.7);
+        &:focus-within {
+          outline: none;
+        }
+
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.7);
+        }
+      }
+
+      button {
+        font-size: 15px;
+        font-weight: 700;
+        border: 0;
+        background: var(--ed-color-primary);
+        color: var(--ed-color-white);
+        height: 42px;
+        padding: 0 20px;
+      }
+    }
+
+    .ed-subscribe-form-input-label {
+      label {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.7);
+        position: relative;
+
+        a {
+          color: var(--ed-color-white);
+
+          &:hover {
+            color: var(--ed-color-secondary);
+          }
+        }
+
+        &::before {
+          width: 14px;
+          height: 14px;
+          border: 1px solid rgba(255, 255, 255, 0.4);
+          content: "";
+          display: inline-block;
+          vertical-align: middle;
+          transform: translateY(-1px);
+          margin-right: 8px;
+        }
+
+        &::after {
+          position: absolute;
+          left: 2px;
+          top: 5px;
+          font-family: "Font awesome 6 pro";
+          content: "\f00c";
+          font-size: 9px;
+          transition: all 0.3s;
+          opacity: 0;
+          visibility: hidden;
+
+          @media #{$md} {
+            left: 3px;
+          }
+        }
+      }
+
+      input {
+        display: none;
+      }
+
+      input:checked ~ label::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+
+  // Form search.
+  .ed-form-search {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px); // minimal browser support
+    border-radius: 4px;
+    max-width: 240px;
+    display: flex;
+    justify-content: space-between;
+    height: 38px;
+
+    input {
+      flex-grow: 1;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.6);
+      padding-left: 14px;
+      background: transparent;
+      border: 0;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+
+    button {
+      padding: 0 10px;
+      color: #ffffff;
+      background: transparent;
+      border: 0;
+    }
+  }

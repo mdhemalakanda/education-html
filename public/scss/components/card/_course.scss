@@ -2,6 +2,21 @@
 .ed-course-box-card {
   background: var(--ed-color-white);
 
+  .ed-action-area {
+    @media #{$xs} {
+      padding-bottom: 15px;
+    }
+  }
+
+  .ed-rating-bottom-body {
+    @media #{$xs} {
+      padding: 15px;
+    }
+  }
+
+  .ed-meta-horizontal-2 {
+    margin-bottom: 15px;
+  }
   
   hr {
     margin: 0;
@@ -9,6 +24,10 @@
   
   .ed-content-inner {
     padding-bottom: 22px;
+
+    @media #{$xs} {
+      padding: 15px;
+    }
   }
 
   .ed-badge {
@@ -19,11 +38,24 @@
 
   .ed-img {
     position: relative;
+
+    a {
+      display: block;
+
+      img {
+        width: 100%;
+      }
+    }
   }
 
   & .ed-title {
     font-size: 20px;
     margin-bottom: 18px;
+
+    @media #{$xs} {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
 
     & a {
         color: inherit;
@@ -40,6 +72,7 @@
 .ed-meta-horizontal-2 {
   display: flex;
   grid-gap: 10px;
+  flex-wrap: wrap;
 
   li {
     background: #EDF2F6;
@@ -49,6 +82,11 @@
     width: fit-content;
     grid-gap: 5px;
     border-radius: 40px;
+
+    @media #{$xs} {
+      padding-right: 9px;
+      grid-gap: 2px
+    }
 
     i {
       width: 28px;

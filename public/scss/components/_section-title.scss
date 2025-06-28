@@ -1,11 +1,33 @@
-.ed-section-title .ed-title {
-    display: flex;
-    align-items: center;
-    grid-gap: 12px;
-    flex-wrap: wrap;
-    margin-bottom: 0;
-    line-height: 1.4;
-    & > img {
-        max-width: 34px;
+.ed-section-title {
+    .ed-title {
+        display: flex;
+        align-items: center;
+        grid-gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+        line-height: 1.4;
+
+        .ed-avatar-group {
+            margin: 0px 10px;
+        }
+
+        @media #{$lg, $md} {
+            font-size: 30px;
+        }
+
+        @media #{$xs} {
+            font-size: 25px;
+        }
+
+        & > img {
+            max-width: 34px;
+        }
+    }
+}
+
+.ed-section-title-2 {
+    .ed-title {
+        font-size: 40px;
+        font-weight: 600;
     }
 }

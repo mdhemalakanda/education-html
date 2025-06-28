@@ -1,0 +1,35 @@
+<!-- banner area start -->
+    <section class="banner-area ed-section-banner-space-2">
+        <div class="ed-container-wide-2">
+            <div class="row align-items-center">
+                <div class="col-xxl-6">
+                    <div class="ed-banner-content-2">
+                        <h2 class="ed-banner-title-2">
+                            Best-in-Class Digital <span>E</span>-Learning Solutions
+                        </h2>
+                        <p>Suspendisse sit amet est purus. Aliquam dapibus, arcu sed condimentum facilisis, lacus<br/> justo scelerisque tellus, eu faucibus nisi turpis ut diam.
+                        </p>
+                        <div class="ed-banner-content-bottom-2">
+                            <a href="#" class="ed-sweet-button">Start Free Trial <i class="fal fa-arrow-right"></i></a>
+                            {% import "components/rating-box.html" as ratingBox %}
+                            {{ ratingBox.googleRating("4.8 Rating on Google", 4) }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xxl-6">
+                    <div class="ed-banner-image-box-right">
+                        <div class="ed-img">
+                            <img src="/images/banner/banner-mockup.png" alt="Banner Image">
+                            <div class="has-blured-scaleup-animation">
+                                {% import "components/button/button-play.html" as btn %}
+                                {{ btn.button('#') }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- banner area end -->

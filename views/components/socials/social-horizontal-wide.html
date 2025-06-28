@@ -1,0 +1,15 @@
+{% macro socialIcons(icons=[]) %}
+<div class="ed-social-horizontal-wide">
+    {% for icon in icons %}
+    <div class="ed-social-item">
+        <div class="ed-icon">
+            {# Corrected: Use <img> tag for SVG files #}
+            <img src="{{ icon.svg }}" alt="{{ icon.label }} icon">
+        </div>
+        <div class="ed-label">
+            <a href="{{ icon.url }}">{{ icon.label }}</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endmacro %}
