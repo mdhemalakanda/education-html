@@ -86,3 +86,15 @@
     }
   }
 }
+
+.ed-badge {
+  &.badge-danger,
+  &.badge-danger:hover {
+    background: var(--ed-color-danger);
+    color: var(--ed-color-white);
+  }
+
+  &.ed-badge-rounded {
+    border-radius: 4px;
+  }
+}

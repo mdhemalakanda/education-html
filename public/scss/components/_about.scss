@@ -1,0 +1,87 @@
+.ed-about-area-1 {
+
+    .ed-course-card-bordered-2 {
+        min-width: 300px;
+        margin-left: -15px;
+    }
+
+    .ed-about-1-content {
+        padding-bottom: 66px;
+        padding-left: 45px;
+
+        .ed-title {
+            font-weight: 600;
+            color: var(--ed-color-white);
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 30px;
+        }
+
+        .ed-list-2 {
+            margin-bottom: 57px;
+        }
+    }
+}
+
+.ed-sm-round {
+  border-radius: 6px;
+}
+
+.ed-about-1-root-wrapper {
+  position: relative;
+
+  .ed-about-1-img {
+    position: absolute;
+    left: -119px;
+    bottom: -90px;
+
+    img {
+      max-width: 612px;
+    }
+  }
+}
+
+.ed-about-1-content-root-wrapper {
+  position: relative;
+}
+
+.ed-about-1-section-space {
+    padding-bottom: 90px;
+    margin-top: 110px;
+    padding-top: 160px;
+}
+
+.ed-about-1-bg-image {
+    background-image: url('../images/background/about-bg.png');
+    background-size: cover;
+}
+
+.ed-about-area-2-root-wrapper {
+  border-radius: 10px;
+  padding-top: 120px;
+  padding-bottom: 188px;
+}
+
+.ed-about-content-2 {
+
+  &.has-right-gap {
+    padding-right: 120px;
+  }
+
+  p {
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+
+  .ed-logo {
+    margin-bottom: 28px;
+  }
+
+  .ed-horizontal-label-social {
+    margin-top: 53px;
+  }
+}

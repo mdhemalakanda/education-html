@@ -1,0 +1,20 @@
+{% macro BlogCard(post) %}
+<div class="ed-blog-card-2">
+  <div class="ed-image">
+    <a href="{{ post.post_url }}"><img src="{{ post.image }}" alt="Blog Image"></a>
+    {% import "components/meta/meta-transparent-with-border.html" as meta %}
+    {% set postMeta = [
+      { icon: "fal fa-calendar", label: post.date, url: post.date_url },
+      { icon: "fal fa-user", label: post.author, url: post.author_url }
+    ] %}
+    {{ meta.BlogMeta(postMeta) }}
+  </div>
+
+  <div class="ed-content">
+    <h6 class="ed-title"><a href="{{ post.post_url }}">{{ post.title }}</a></h6>
+    <p>Velit ullamcorper morbi tincidunt ornare massa pulvinar mattis blandit volutpat.</p>
+    {% import "components/button/button-icon-2.html" as btn %}
+    {{ btn.actionButton(post.post_url) }}
+  </div>
+</div>
+{% endmacro %}

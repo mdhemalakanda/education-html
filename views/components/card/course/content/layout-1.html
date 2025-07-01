@@ -1,0 +1,16 @@
+{% macro courseContent(courseInfo) %}
+<div class="ed-course-card-popup-desc">
+    {% import "components/meta/meta-transparent-2.html" as meta %}
+    {{ meta.courseMeta(courseInfo.lessons, courseInfo.students) }}
+    <h5 class="ed-title ed-title-border-box-2"><a href="{{courseInfo.permalink}}">{{ courseInfo.title }}</a></h5>
+    <p>{{courseInfo.description}}.</p>
+    {% import "components/list/layout-1.html" as list %}
+    {{ list.checklist(courseInfo.features) }}
+    <div class="ed-course-card-action-bottom">
+        {% import "components/button/button-ultra-wide.html" as btn %}
+        {{ btn.addToCartButton("{{courseInfo.add_cart_url}}", "Add to Cart") }}
+        {% import "components/button/button-icon.html" as btn %}
+        {{ btn.favoriteButton("{{courseInfo.wishlist_url}}", true) }}
+    </div>
+</div>
+{% endmacro %}

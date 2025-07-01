@@ -1,0 +1,49 @@
+{% set blogPosts = [
+  {
+    image: "/images/blog/blog-02-1.jpg",
+    date: "March 16, 2024",
+    author: "Alan Fresco",
+    title: "First Baptist Cape Coral we affirm.",
+    post_url: "#",
+    date_url: "#",
+    author_url: "#"
+  },
+  {
+    image: "/images/blog/blog-02-2.jpg",
+    date: "June 20, 2024",
+    author: "Pelican Steve",
+    title: "Master's Training English Speakers.",
+    post_url: "#",
+    date_url: "#",
+    author_url: "#"
+  },
+  {
+    image: "/images/blog/blog-02-3.jpg",
+    date: "July 08, 2024",
+    author: "Miles Tone",
+    title: "Petitioning a community & platform.",
+    post_url: "#",
+    date_url: "#",
+    author_url: "#"
+  }
+] %}
+
+<!-- news area start -->
+<div class="ed-news-area">
+    <div class="ed-section-title-2">
+        <h4 class="ed-title text-center">
+            Current News & Blogs
+        </h4>
+    </div>
+    <div class="container">
+        <div class="row">
+        {% import "components/card/blog/layout-2.html" as blog %}
+        {% for post in blogPosts %}
+            <div class="col-xxl-4">
+                {{ blog.BlogCard(post) }}
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- news area end -->

@@ -1,0 +1,5 @@
+{% macro favoriteButton(url="#", isActive=false) %}
+<a href="{{ url }}" class="ed-course-action-icon-btn">
+  <i class="fal fa-heart{% if isActive %} fas{% endif %}"></i>
+</a>
+{% endmacro %}

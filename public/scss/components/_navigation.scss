@@ -1,0 +1,19 @@
+.ed-navigation {
+  display: flex;
+  gap: 8px;
+
+  button {
+    width: 46px;
+    height: 46px;
+    border: 0;
+    border-radius: 10px 10px 10px 0;
+
+    &:last-child {
+      border-radius: 10px 10px 0 10px;
+    }
+
+    &:hover {
+      background: var(--ed-color-sweet);
+    }
+  }
+}

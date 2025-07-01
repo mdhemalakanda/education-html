@@ -1,0 +1,17 @@
+{% macro testimonialCard(testimonial) %}
+<div class="ed-testimonial-card-2">
+    <div class="ed-image">
+        <img src="{{ testimonial.image }}" alt="Testimonial Image">
+    </div>
+    <div class="ed-content">
+        {% import "components/rating/rating-star-view.html" as rating %}
+        {{ rating.starRating(testimonial.rating) }}
+        <p>{{ testimonial.content }}</p>
+        <div class="ed-sm-user-content-box">
+            <h6 class="ed-title">{{ testimonial.name }}</h6>
+            <span>{{ testimonial.role }}</span>
+        </div>
+        <h5 class="ed-flipped-text">{{ testimonial.label }}</h5>
+    </div>
+</div>
+{% endmacro %}

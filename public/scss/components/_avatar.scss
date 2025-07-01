@@ -9,3 +9,16 @@
         border: 2px solid var(--ed-color-white);
     }
 }
+
+.ed-sm-user-content-box {
+  .ed-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  span {
+    display: block;
+    color: var(--ed-color-body);
+  }
+}

@@ -1,0 +1,20 @@
+{% macro banner(image_url, title, btn_text, btn_url) %}
+<div class="ed-banner-layout-6 ed-banner-layout-6-bg">
+    <div class="row align-items-center">
+        <div class="col-xxl-5">
+            <div class="ed-content">
+                <h4 class="ed-title">{{title}}</h4>
+            </div>
+        </div>
+        <div class="col-xxl-3">
+            {% import "components/button/button-wide.html" as btn %}
+            {{ btn.button(btn_url, btn_text, "ed-sweet ed-sm-round") }}
+        </div>
+        <div class="col-xxl-4">
+            <div class="text-end">
+                <img src="{{image_url}}" alt="Banner Image">
+            </div>
+        </div>
+    </div>
+</div>
+{% endmacro %}

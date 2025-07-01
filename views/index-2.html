@@ -7,15 +7,68 @@
     {% include "partials/head.html" %}
 </head>
 <body>
-    <div class="ed-head-banner-bg-wrapper">
+    <div class="ed-primary-bg">
         <div class="ed-pt-30">
             {% include "components/header/layout-2.html" %}
         </div>
         {% include "components/banner/layout-5.html" %}
        <!-- /.banner layout end -->
        {% include "components/category/layout-2.html" %} 
+       <!-- category layout end -->
 
-        {% include "partials/scripts.html" %}
+       <div class="ed-pt-120 ed-pb-100">
+           {% include "components/related-course/layout-1.html" %}
+           {% include "partials/scripts.html" %}
+       </div>
+
+       <!-- course banner 2 start -->
+        <div class="ed-course-banner-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-6 col-sm-6">
+                        <div class="ed-mb-30 mb-lg-0">
+                            {% import "components/banner/layout-2.html" as banner_component %}
+                            {{ banner_component.banner('', '<span>DIGITAL</span> Classes by History', '/images/banner/banner-img-1.png') }}
+                        </div>
+                    </div>
+                    <div class="col-xxl-6 col-sm-6">
+                        {% import "components/banner/layout-2.html" as banner_component2 %}
+                        {{ banner_component2.banner('bg-2', '<span>DIGITAL</span> Classes by History', '/images/banner/banner-img-2.png', 'ed-btn-purple') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- course banner 2 end -->
+
+        {% include "components/about/layout-1.html" %}
+    </div>
+    <div class="ed-testimonial-2-section-space">
+        {% include "components/testimonial/testimonial-section.html" %}
+    </div>
+    <div class="ed-faq-section-space-2">
+        {% import "components/faq/layout-1.html" as faq %}
+        {{ faq.question('/images/banner/faq-2.png') }}
+    </div>
+
+    <!-- banner area start -->
+     <div class="ed-banner-area-section ed-banner-section-2-space">
+        <div class="container">
+            {% import "components/banner/layout-6.html" as banner_file %}
+            {{ banner_file.banner('/images/banner/banner-img-2.png', 'Acclaimed Educators Worldwide', 'Learn More', '#') }}
+        </div>
+     </div>
+    <!-- banner area end -->
+
+    {% include "components/instructor/instructor-section.html" %}
+    <!-- end teacher -->
+    
+    {% include "components/about/layout-2.html" %}
+    <!-- about layout 2 -->
+
+   {% include "components/subscribe-section/layout-1.html" %}
+
+    <div class="ed-section-blog-space-2">
+        {% include "components/blog/layout-2.html" %}
     </div>
 </body>
 </html>

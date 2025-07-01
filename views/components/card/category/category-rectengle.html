@@ -1,7 +1,7 @@
-{% macro category(title, url, excerpt, course_count, image_url='/images/categories/cat-1.svg', image_alt='Category Image', bg_class) %}
+{% macro category(title, url, excerpt, course_count, image_url, image_alt, bg_class) %}
 <div class="ed-category-box-2 {{ bg_class }}">
     <div class="ed-icon">
-        <img src="{{ image_url }}" alt="{{ image_alt }}">
+        <img src="{{ image_url }}" alt="">
     </div>
     <div class="ed-content">
         <h6 class="ed-title"><a href="{{ url }}">{{ title }}</a></h6>

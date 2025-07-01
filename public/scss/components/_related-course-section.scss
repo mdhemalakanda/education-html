@@ -21,3 +21,51 @@
         }
     }
 }
+
+.ed-related-course-tab-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: 1px solid rgba(5, 12, 31, 0.1);
+  border-radius: 4px;
+  width: fit-content;
+  outline-offset: -1px;
+  overflow: hidden;
+
+  button {
+    font-weight: 500;
+    padding: 6px 27px;
+    background: transparent;
+    border: 0;
+    position: relative;
+
+    &.active, &:hover {
+      background: var(--ed-color-sweet);
+    }
+  }
+}
+
+.ed-related-course-area-2 {
+   .ed-related-course-tab-2 {
+        margin: 0 auto;
+   }
+
+   .ed-section-title-2 {
+        .ed-title {
+            margin-bottom: 45px;
+        }
+   }
+}
+
+@media (min-width: 1600px) {
+    .ed-related-course-grid-view-2 .row > *:nth-child(4n) .ed-course-card-popup-desc {
+        left: auto;
+        right: calc(100% + 30px);
+        
+        &::before {
+            left: auto;
+            right: -16px;
+            transform: rotateY(180deg);
+        }
+    }
+}

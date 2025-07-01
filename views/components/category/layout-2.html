@@ -14,47 +14,61 @@
                     </div>
                 </div>
                 <div class="ed-category-right-content-2">
+                    {% import "components/card/category/category-rectengle.html" as cat %}
+                    {% set categories = [
+                        {
+                            title: 'Sales Marketing',
+                            url: '#',
+                            excerpt: 'Praesent malesuada porttitor nunc zacilisis nibh maximus nisl nec risus.',
+                            course_count: 34,
+                            image_url: '/images/categories/cat-1.svg',
+                            image_alt: 'Category Image',
+                            bg_class: 'bg-soft-blue'
+                        },
+                        {
+                            title: 'Sales Marketing',
+                            url: '#',
+                            excerpt: 'Praesent malesuada porttitor nunc zacilisis nibh maximus nisl nec risus.',
+                            course_count: 28,
+                            image_url: '/images/categories/cat-2.svg',
+                            image_alt: 'Category Image',
+                            bg_class: 'ed-bg-success-soft'
+                        },
+                        {
+                            title: 'Sales Marketing',
+                            url: '#',
+                            excerpt: 'Praesent malesuada porttitor nunc zacilisis nibh maximus nisl nec risus.',
+                            course_count: 28,
+                            image_url: '/images/categories/cat-3.svg',
+                            image_alt: 'Category Image',
+                            bg_class: 'ed-bg-warning-soft'
+                        },
+                        {
+                            title: 'Sales Marketing',
+                            url: '#',
+                            excerpt: 'Praesent malesuada porttitor nunc zacilisis nibh maximus nisl nec risus.',
+                            course_count: 28,
+                            image_url: '/images/categories/cat-4.svg',
+                            image_alt: 'Category Image',
+                            bg_class: 'ed-bg-pending-soft'
+                        }
+                    ] %}
                     <div class="row g-0">
+                        {% for catItem in categories %}
                         <div class="col-xxl-6">
                             {% import "components/card/category/category-rectengle.html" as cat %}
-                            {{ cat.category('Sales Marketing', '#', 'Praesent malesuada porttitor nunc zacilisis nibh maximus nisl nec risus.', 34, '/images/categories/cat-1.svg', 'Category Image') }}
+                             {{ cat.category(
+                                catItem.title,
+                                catItem.url,
+                                catItem.excerpt,
+                                catItem.course_count,
+                                catItem.image_url,
+                                catItem.image_alt,
+                                catItem.bg_class
+                            ) }}
+
                         </div>
-                        <div class="col-xxl-6">
-                            <div class="ed-category-box-2 ed-bg-success-soft">
-                                <div class="ed-icon">
-                                    <img src="/images/categories/cat-2.svg" alt="Category Image">
-                                </div>
-                                <div class="ed-content">
-                                    <h6 class="ed-title"><a href="#">Sales Marketing</a></h6>
-                                    <p>Praesent malesuada porttitor nunc zacilisis nibh maximus nisl nec risus. </p>
-                                    <a href="#" class="ed-link">28 Course <i class="fal fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xxl-6">
-                            <div class="ed-category-box-2 ed-bg-warning-soft">
-                                <div class="ed-icon">
-                                    <img src="/images/categories/cat-3.svg" alt="Category Image">
-                                </div>
-                                <div class="ed-content">
-                                    <h6 class="ed-title"><a href="#">Sales Marketing</a></h6>
-                                    <p>Praesent malesuada porttitor nunc zacilisis nibh maximus nisl nec risus. </p>
-                                    <a href="#" class="ed-link">28 Course <i class="fal fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xxl-6">
-                            <div class="ed-category-box-2 ed-bg-pending-soft">
-                                <div class="ed-icon">
-                                    <img src="/images/categories/cat-4.svg" alt="Category Image">
-                                </div>
-                                <div class="ed-content">
-                                    <h6 class="ed-title"><a href="#">Sales Marketing</a></h6>
-                                    <p>Praesent malesuada porttitor nunc zacilisis nibh maximus nisl nec risus. </p>
-                                    <a href="#" class="ed-link">28 Course <i class="fal fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>

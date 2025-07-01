@@ -1,0 +1,19 @@
+{% macro quickNav(items) %}
+<ul class="ed-quick-page-navigation-list">
+    {% for item in items %}
+    <li>
+        <a href="{{ item.url }}">
+            <div class="ed-content-main">
+                <span class="ed-count">
+                    {% if loop.index < 10 %}0{{ loop.index }}{% else %}{{ loop.index }}{% endif %}
+                </span>
+                <h6 class="ed-label">{{ item.label }}</h6>
+            </div>
+            <div class="ed-navigate">
+                <i class="fal fa-arrow-right"></i>
+            </div>
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+{% endmacro %}

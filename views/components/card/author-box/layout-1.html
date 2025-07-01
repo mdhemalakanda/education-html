@@ -1,0 +1,11 @@
+{% macro authorBox(thumb) %}
+<div class="ed-sm-author-box-3 {{ thumb.bgClass }}">
+    <div class="ed-image">
+        <img src="{{ thumb.image }}" alt="Author">
+    </div>
+    <div class="ed-content">
+    <h6 class="ed-title">{{ thumb.name }}</h6>
+    <span class="ed-role">{{ thumb.role }}</span>
+    </div>
+</div>
+{% endmacro %}

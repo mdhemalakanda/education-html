@@ -1,0 +1,77 @@
+{% set instructors = [
+  {
+    name: "Fergus Douchebag",
+    role: "UX Design Lead",
+    description: "Donec rutrum viverra aliquam eros fruisque rhoncus.",
+    image: "/images/author/instructor-1.png",
+    social: {
+      facebook: "#",
+      twitter: "#",
+      linkedin: "#",
+      pinterest: "#"
+    }
+  },
+  {
+    name: "Bartholomew Shoe",
+    role: "Web Development",
+    description: "Donec rutrum viverra aliquam eros fruisque rhoncus.",
+    image: "/images/author/instructor-2.png",
+    social: {
+      facebook: "#",
+      twitter: "#",
+      linkedin: "#",
+      pinterest: "#"
+    }
+  },
+  {
+    name: "Sandra Dune",
+    role: "Graphic Designer",
+    description: "Vivamus magna justo, lacinia eget consectetur sed.",
+    image: "/images/author/instructor-1.png",
+    social: {
+      facebook: "#",
+      twitter: "#",
+      linkedin: "#",
+      pinterest: "#"
+    }
+  }
+] %}
+
+<!-- instructor area start -->
+<div class="instructor-area ed-instructor-section-space-2">
+    <div class="container">
+        <div class="ed-instructor-head">
+            <div class="row">
+                <div class="col-xxl-6">
+                    <div class="ed-section-title-2">
+                        <h4 class="ed-title">
+                            Foremost Instructor
+                        </h4>
+                    </div>
+                </div>
+                <div class="col-xxl-6">
+                    <div class="text-end">
+                        <div class="ed-navigation justify-content-end">
+                            <button class="ed-prev ed-instructor-2-prev"><i class="fal fa-arrow-left"></i></button>
+                            <button class="ed-next ed-instructor-2-next"><i class="fal fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ed-instructor-content-body">
+            <div class="ed-instructor-active-2 swiper">
+                <div class="swiper-wrapper">
+                    {% for instructor in instructors %}
+                        <div class="swiper-slide">
+                            {% import "components/card/team/team-instructor.html" as teacher %}
+                            {{ teacher.instructorCard(instructor) }}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- instructor area end -->

@@ -118,32 +118,6 @@
     }
 ] %}
 
-{% set faqs = [
-  {
-    id: "accordion-1",
-    question: "Identify your standard questions?",
-    answer: "There are many variations of passages Ut a sem rhonchus at connecter sem lutropins dolor sit amet consectetur adipiscing elit proin leo sem luctus turpis  feugiat convallis diam.fugit convallis diam available.!",
-    expanded: true
-  },
-  {
-    id: "accordion-two",
-    question: "Segment questions by category?",
-    answer: "There are many variations of passages Ut a sem rhonchus at connecter sem lutropins dolor sit amet consectetur adipiscing elit proin leo sem luctus turpis  feugiat convallis diam.fugit convallis diam available.!",
-    expanded: false
-  },
-  {
-    id: "accordion-three",
-    question: "How to choose the perfect class for me?",
-    answer: "There are many variations of passages Ut a sem rhonchus at connecter sem lutropins dolor sit amet consectetur adipiscing elit proin leo sem luctus turpis  feugiat convallis diam.fugit convallis diam available.!",
-    expanded: false
-  },
-  {
-    id: "accordion-four",
-    question: "How does the Affiliate Program run?",
-    answer: "There are many variations of passages Ut a sem rhonchus at connecter sem lutropins dolor sit amet consectetur adipiscing elit proin leo sem luctus turpis  feugiat convallis diam.fugit convallis diam available.!",
-    expanded: false
-  }
-] %}
 
 
 <!DOCTYPE html>
@@ -251,7 +225,8 @@
     {% include "components/team/layout-1.html" %}
 </div>
 <div class="ed-faq-section-space">
-    {% include "components/faq/layout-1.html" %}
+    {% import "components/faq/layout-1.html" as faq %}
+    {{ faq.question('/images/banner/faq.png') }}
 </div>
 {% include "components/blog/layout-1.html" %}
 {% include "components/footer/layout-1.html" %}

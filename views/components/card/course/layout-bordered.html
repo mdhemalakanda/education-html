@@ -1,0 +1,42 @@
+{% macro courseCard(courseInfo) %}
+<div class="ed-course-card-bordered-2">
+    <div class="ed-image">
+        <img src="{{courseInfo.image}}" alt="">
+        <a href="{{courseInfo.category_url}}" class="ed-badge badge-danger ed-badge-rounded">Learning</a>
+        <a href="{{courseInfo.wishlist_url}}" class="ed-course-action-icon-btn"><i class="fal fa-heart"></i></a>
+    </div>
+
+    <div class="ed-content">
+        {% import "components/meta/meta-transparent-2.html" as meta %}
+        {{ meta.courseMeta(courseInfo.lessons, courseInfo.students) }}
+        
+        <h5 class="ed-title ed-title-border-box-2">
+            <a href="{{courseInfo.permalink}}">{{ courseInfo.title }}</a>
+        </h5>
+
+        {% import "components/price/layout-1.html" as price %}
+        {{ price.coursePrice(courseInfo.price, courseInfo.originalPrice) }}
+    </div>
+
+    <hr>
+
+    <div class="ed-content-bottom">
+        <div class="row align-items-center">
+            <div class="col-xxl-8">
+                <div class="ed-sm-author-box">
+                    <div class="ed-img">
+                        <img src="{{ courseInfo.authorImg }}" alt="Course Author">
+                    </div>
+                    <div class="ed-content">
+                        <a href="{{ courseInfo.author_url }}">{{ courseInfo.author }}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-4">
+                {% import "components/rating/rating-count-only.html" as rating %}
+                {{ rating.courseRating(courseInfo.rating) }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endmacro %}

@@ -1,0 +1,14 @@
+{% macro socialLinks(links) %}
+<ul class="ed-horizontal-label-social">
+    {% for link in links %}
+    <li>
+        <div class="ed-icon {{ link.bgClass }}">
+            <i class="{{ link.iconClass }}"></i>
+        </div>
+        <div class="ed-content">
+            <h6 class="ed-title"><a href="{{ link.url }}">{{ link.name }}</a></h6>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+{% endmacro %}

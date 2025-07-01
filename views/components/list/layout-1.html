@@ -1,0 +1,9 @@
+{% macro checklist(items) %}
+<div class="ed-list-view-1">
+    <ul>
+        {% for item in items %}
+            <li><i class="fal fa-check"></i> {{ item }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endmacro %}

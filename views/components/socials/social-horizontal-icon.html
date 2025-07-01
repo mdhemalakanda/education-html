@@ -1,0 +1,16 @@
+{% macro socialIcons(social) %}
+<ul class="ed-social-horizontal-icon-only">
+  {% if social.facebook %}
+    <li><a href="{{ social.facebook }}" class="bg-facebook"><i class="fab fa-facebook-f"></i></a></li>
+  {% endif %}
+  {% if social.twitter %}
+    <li><a href="{{ social.twitter }}" class="bg-twitter"><i class="fab fa-twitter"></i></a></li>
+  {% endif %}
+  {% if social.linkedin %}
+    <li><a href="{{ social.linkedin }}" class="bg-linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+  {% endif %}
+  {% if social.pinterest %}
+    <li><a href="{{ social.pinterest }}" class="bg-pinterest"><i class="fab fa-pinterest"></i></a></li>
+  {% endif %}
+</ul>
+{% endmacro %}

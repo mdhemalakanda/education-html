@@ -1,0 +1,21 @@
+.ed-rarting {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    grid-gap: 8px;
+    color: var(--ed-color-primary);
+    & i {
+        color: var(--ed-color-body);
+        &.active {
+            color: var(--ed-color-warning);
+        }
+    }
+}
+
+
+.ed-rating-stars {
+    i {
+        color: var(--ed-color-warning);
+    }
+}

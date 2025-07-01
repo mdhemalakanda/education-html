@@ -1,22 +1,33 @@
 {% macro subscribe(
-        label='I agree to the <a href=\'#\'>Privacy Policy</a>.', 
-        placeholder='Your email', 
-        buttonText='Subscribe', 
-        formAction='post', 
-        inputId='email', 
-        checkboxId='email_check'
-    )
-%}
-<form action="{{ formAction }}" class="ed-subscribe-form">
+    form_class = '',
+    has_label=true,
+    btn_class = 'ed-wite-btn-sm',
+    has_arrow=false,
+    label='I agree to the <a href=\'#\'>Privacy Policy</a>.',
+    placeholder='Your email',
+    buttonText='Subscribe',
+    formAction='post',
+    inputId='email',
+    checkboxId='email_check'
+) %}
+<form action="{{ formAction }}" class="ed-subscribe-form {{ form_class }}">
     <div class="ed-subscribe-form-input-area">
         <input type="email" name="email" placeholder="{{ placeholder }}" id="{{ inputId }}">
-        <button class="ed-wite-btn-sm" type="button">{{ buttonText }}</button>
+        <button class="{{btn_class}}" type="button">
+            {{ buttonText }}
+            {% if has_arrow %}
+            <i class="fal fa-angle-right"></i>
+            {% endif %}
+        </button>
     </div>
+
+    {% if has_label %}
     <div class="ed-subscribe-form-input-label">
         <input type="checkbox" id="{{ checkboxId }}">
         <label for="{{ checkboxId }}">
             {{ label | safe }}
         </label>
     </div>
+    {% endif %}
 </form>
 {% endmacro %}

@@ -1,0 +1,40 @@
+<!-- about area start -->
+<div class="ed-about-area-2 ed-pt-120">
+    <div class="ed-container-wide-2">
+        <div class="ed-about-area-2-root-wrapper ed-bg-pending-soft">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xxl-6">
+                        <div class="ed-about-content-2 has-right-gap">
+                            <div class="ed-logo">
+                                <a href="#"><img src="/images/logo.png" alt="Logo"></a>
+                            </div>
+                            <p>Praesent iaculis quam et metus rutrum sagittis.Nulla sodales feugiat ante eu feugiat dolor imperdiet vitae justo luctus semper lectus vel faucibus turpis. Mauris vitae odio libero Fusce finibus condimentum suscipit.</p>
+                            {% import "components/socials/social-horizontal-icon-label.html" as social %}
+                            {% set socialMedia = [
+                                { name: "Facebook", url: "#", iconClass: "fab fa-facebook-f", bgClass: "bg-facebook" },
+                                { name: "Twitter", url: "#", iconClass: "fab fa-twitter", bgClass: "bg-twitter" },
+                                { name: "Pinterest", url: "#", iconClass: "fab fa-pinterest-p", bgClass: "bg-pinterest" }
+                            ] %}
+                            {{ social.socialLinks(socialMedia) }}
+                        </div>
+                    </div>
+                    <div class="col-xxl-6">
+                        {% import "components/navigation/quick-page.html" as quick_page %}
+
+                            {% set navItems = [
+                                { label: "Courses", url: "#" },
+                                { label: "Master Class", url: "#" },
+                                { label: "About", url: "#" },
+                                { label: "How it Works", url: "#" }
+                            ] %}
+
+                        {{ quick_page.quickNav(navItems) }}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- about area end -->

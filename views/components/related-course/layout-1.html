@@ -1,0 +1,225 @@
+{% set courses = [
+  {
+    "id": 1,
+    "image": "/images/course/card-bordered/related-course-card-1.jpg",
+    "category_url": "#",
+    "category": "Learning",
+    "wishlist_url": "#",
+    "permalink": "#",
+    "title": "Professional-Level Graphic Design Course.",
+    "lessons": 34,
+    "students": 78,
+    "add_cart_url": "#",
+    "price": 96,
+    "originalPrice": 120,
+    "rating": 4.5,
+    "author_url": "#",
+    "author": "Desmond Eagle",
+    "authorImg": "/images/author/teacher-1.png",
+    "description": "Dolorous qualm quisque connecter adipescent impediment.",
+    "features": [
+      "Eita quad ex rhonchus vitae lectors in digicam pharetra ipsum.",
+      "Magmas dis parturient mantes",
+      "Morbi critique lorem sit a met arco utricles tempus."
+    ]
+  },
+  {
+    "id": 2,
+    "image": "/images/course/card-bordered/related-course-card-2.jpg",
+    "category_url": "#",
+    "category": "Art & Design",
+    "wishlist_url": "#",
+    "permalink": "#",
+    "title": "Pixel Art Mastery Lessons: Novice to Master.",
+    "lessons": 38,
+    "students": 56,
+    "add_cart_url": "#",
+    "price": 0,
+    "originalPrice": 88,
+    "rating": 4.5,
+    "author_url": "#",
+    "author": "Poly Gone",
+    "authorImg": "/images/author/teacher-2.png",
+    "description": "Pixel art design from scratch, including shading and retro animation.",
+    "features": [
+      "Retro style guide",
+      "Hands-on project samples",
+      "Upload and critique sessions"
+    ]
+  },
+  {
+    "id": 3,
+    "image": "/images/course/card-bordered/related-course-card-3.jpg",
+    "category_url": "#",
+    "category": "Science",
+    "wishlist_url": "#",
+    "permalink": "#",
+    "title": "AI-Driven Digital Marketing Mastery Classes",
+    "lessons": 44,
+    "students": 62,
+    "add_cart_url": "#",
+    "price": 59,
+    "originalPrice": 79,
+    "rating": 4.5,
+    "author_url": "#",
+    "author": "Elon Gated",
+    "authorImg": "/images/author/teacher-3.png",
+    "description": "Build automated AI funnels and strategy with real case studies.",
+    "features": [
+      "AI content generator tools",
+      "Targeting + ROI dashboards",
+      "Campaign optimization tips"
+    ]
+  },
+  {
+    "id": 4,
+    "image": "/images/course/card-bordered/related-course-card-4.jpg",
+    "category_url": "#",
+    "category": "Finance",
+    "wishlist_url": "#",
+    "permalink": "#",
+    "title": "Ultimate Guide to Graphic Design Theory",
+    "lessons": 39,
+    "students": 66,
+    "add_cart_url": "#",
+    "price": 72,
+    "originalPrice": 110,
+    "rating": 4.5,
+    "author_url": "#",
+    "author": "Claire Voyant",
+    "authorImg": "/images/author/teacher-1.png",
+    "description": "Master the principles of layout, typography, and composition.",
+    "features": [
+      "Color and contrast psychology",
+      "Modern typography trends",
+      "Real-world projects"
+    ]
+  },
+  {
+    "id": 5,
+    "image": "/images/course/card-bordered/related-course-card-5.jpg",
+    "category_url": "#",
+    "category": "Technology",
+    "wishlist_url": "#",
+    "permalink": "#",
+    "title": "Crucial Cloud Computing Components",
+    "lessons": 35,
+    "students": 55,
+    "add_cart_url": "#",
+    "price": 90,
+    "originalPrice": 120,
+    "rating": 4.5,
+    "author_url": "#",
+    "author": "Miles Tone",
+    "authorImg": "/images/author/teacher-4.png",
+    "description": "Get hands-on with cloud architecture, storage, and services.",
+    "features": [
+      "AWS / Azure quickstart",
+      "Deploy serverless apps",
+      "Security and scaling tips"
+    ]
+  },
+  {
+    "id": 6,
+    "image": "/images/course/card-bordered/related-course-card-6.jpg",
+    "category_url": "#",
+    "category": "Expert",
+    "wishlist_url": "#",
+    "permalink": "#",
+    "title": "Machine Learning and Artificial Intelligence",
+    "lessons": 42,
+    "students": 73,
+    "add_cart_url": "#",
+    "price": 80,
+    "originalPrice": 115,
+    "rating": 4.5,
+    "author_url": "#",
+    "author": "Desmond Eagle",
+    "authorImg": "/images/author/teacher-3.png",
+    "description": "Build smart models, from linear regression to neural nets.",
+    "features": [
+      "No-code + Python ML",
+      "Train your own AI bots",
+      "Capstone project with certificate"
+    ]
+  },
+  {
+    "id": 7,
+    "image": "/images/course/card-bordered/related-course-card-7.jpg",
+    "category_url": "#",
+    "category": "Intermediate",
+    "wishlist_url": "#",
+    "permalink": "#",
+    "title": "High-Level Graphic Design Course: Perfect Design",
+    "lessons": 42,
+    "students": 74,
+    "add_cart_url": "#",
+    "price": 79,
+    "originalPrice": 100,
+    "rating": 4.5,
+    "author_url": "#",
+    "author": "Guy Mann",
+    "authorImg": "/images/author/teacher-2.png",
+    "description": "Explore depth, grids, and responsive visuals at an advanced level.",
+    "features": [
+      "Advanced Figma/UI tips",
+      "Responsive layout tools",
+      "Design system templates"
+    ]
+  },
+  {
+    "id": 8,
+    "image": "/images/course/card-bordered/related-course-card-3.jpg",
+    "category_url": "#",
+    "category": "Web Development",
+    "wishlist_url": "#",
+    "permalink": "#",
+    "title": "Gain web developer credentials: HTML CSS.",
+    "lessons": 34,
+    "students": 78,
+    "add_cart_url": "#",
+    "price": 0,
+    "originalPrice": 45,
+    "rating": 4.5,
+    "author_url": "#",
+    "author": "Miles Tone",
+    "authorImg": "/images/author/teacher-1.png",
+    "description": "HTML & CSS from beginner to job-ready frontend web developer.",
+    "features": [
+      "Live code examples",
+      "Visual layout tools",
+      "Portfolio-ready projects"
+    ]
+  }
+]
+%}
+<!-- related course area start -->
+<section class="ed-related-course-area-2">
+    <div class="container">
+        <div class="ed-section-title-2">
+            <h4 class="ed-title text-center">
+                Rated Learning Tutorials
+            </h4>
+        </div>
+        <div class="ed-mb-35">
+            {% import "components/tab/layout-1.html" as tab %}
+            {{ tab.listTabTwo(["UI/UX Design", "Development", "Marketing", "Finance", "Business"], "Marketing") }}
+        </div>
+
+        <div class="ed-related-course-grid-view-2">
+            <div class="row">
+                {% for course in courses %}
+                <div class="col-xxl-3">
+                    <div class="ed-course-border-box-root-2 ed-mb-20">
+                        {% import "components/card/course/layout-bordered.html" as layoutBorder %}
+                        {{ layoutBorder.courseCard(course) }}
+                        {% import "components/card/course/content/layout-1.html" as courseContent %}
+                        {{ courseContent.courseContent(course) }}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- related course area end -->

@@ -1,0 +1,18 @@
+{% macro instructorCard(instructor) %}
+  <div class="ed-team-instructor-box">
+    <div class="ed-image">
+      <a href="#"><img src="{{ instructor.image }}" alt="Instructor Image"></a>
+    </div>
+    <div class="ed-content">
+      <div class="ed-content-top">
+        <h6 class="ed-title"><a href="#">{{ instructor.name }}</a></h6>
+        <span class="ed-role">{{ instructor.role }}</span>
+        <p>{{ instructor.description }}</p>
+      </div>
+      <div class="ed-content-bottom">
+        {% import "components/socials/social-horizontal-icon.html" as social %}
+        {{ social.socialIcons(instructor.social) }}
+      </div>
+    </div>
+  </div>
+{% endmacro %}

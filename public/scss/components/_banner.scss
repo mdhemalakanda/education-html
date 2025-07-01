@@ -317,3 +317,31 @@
     background-image: url("../images/background/banner-shape.png");
     background-size: cover;
 }
+
+.ed-banner-layout-6 {
+  background: var(--ed-color-blue);
+  padding-left: 80px;
+  padding-right: 60px;
+  padding-top: 17px;
+  border-radius: 10px;
+
+  .ed-title {
+    font-weight: 600;
+    font-size: 40px;
+    margin: 0;
+    color: var(--ed-color-white);
+  }
+
+  img {
+    transform: translateY(5px);
+  }
+}
+
+.ed-banner-layout-6-bg {
+    background-image: url("../images/background/banner-shape-6.png");
+    background-size: cover;
+}
+
+.ed-banner-section-2-space {
+    padding-top: 120px;
+}

@@ -31,40 +31,117 @@
 }
 
 .ed-social-horizontal {
+  display: inline-block;
+
+  a {
+    font-size: 16px;
     display: inline-block;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    color: #ffffff;
+    border-radius: 8px;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+}
+
+.ed-social-horizontal-icon-only {
+  li {
+    display: inline-block;
+    list-style: none;
 
     a {
-      font-size: 16px;
-      display: inline-block;
       width: 38px;
       height: 38px;
-      text-align: center;
+      display: inline-block;
       line-height: 38px;
-      color: #ffffff;
-      border-radius: 8px;
+      text-align: center;
+      color: var(--ed-color-white);
+      border-radius: 4px;
 
       &:hover {
         transform: scale(1.1);
       }
+    }
 
-      &:not(:last-child) {
-        margin-right: 4px;
+    &:not(:last-child) a {
+      margin-right: 5px;
+    }
+  }
+}
+
+.ed-horizontal-label-social {
+  display: flex;
+  grid-gap: 20px 40px;
+
+  li {
+    list-style: none;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+
+    &:hover {
+      .ed-icon {
+          transform: scale(1.1);
+        }
+    }
+
+    .ed-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 28px;
+      transition: all 0.3s;
+
+      i {
+        font-size: 12px;
+        color: var(--ed-color-white);
       }
     }
 
-    .bg-facebook {
-      background: #1877F2;
-    }
+    .ed-content {
+      .ed-title {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0;
 
-    .bg-twitter {
-      background: #050C1F;
-    }
+        a {
+          color: inherit;
+          text-decoration: none;
 
-    .bg-linkedin {
-      background: #0A66C2;
-    }
-
-    .bg-pinterest {
-      background: #CB2027;
+          &:hover {
+            color: var(--ed-color-secondary);
+          }
+        }
+      }
     }
   }
+}
+
+
+
+.bg-facebook {
+  background: #1877F2;
+}
+
+.bg-twitter {
+  background: #050C1F;
+}
+
+.bg-linkedin {
+  background: #0A66C2;
+}
+
+.bg-pinterest {
+  background: #CB2027;
+}

@@ -1,0 +1,8 @@
+{% macro coursePrice(current_price, original_price) %}
+<div class="ed-price-v2">
+    <span>${{ current_price }}</span>
+    {% if original_price %}
+        <del>${{ original_price }}</del>
+    {% endif %}
+</div>
+{% endmacro %}

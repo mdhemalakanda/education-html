@@ -1,0 +1,128 @@
+{% set testimonials = [
+  {
+    name: "Parsley Montana",
+    role: "Chief Executive Officer",
+    rating: 3.5,
+    image: "/images/testimonial/testimonial-img.png",
+    content: "Donec rutrum viverra aliquam a eros fruisque rhoncus vestibulum purus dignissim elit ultrices at. Nullam ut felis odio eget diam eget urna sodales vulputate. Morbi ut sodales dolor a porttitor nisi Phasellus bibendum felis vitae molestie mattis nec semper cursus.",
+    label: "Client"
+  },
+  {
+    name: "Parsley Montana",
+    role: "Chief Executive Officer",
+    rating: 5,
+    image: "/images/testimonial/testimonial-img.png",
+    content: "Donec rutrum viverra aliquam a eros fruisque rhoncus vestibulum purus dignissim elit ultrices at. Nullam ut felis odio eget diam eget urna sodales vulputate. Morbi ut sodales dolor a porttitor nisi Phasellus bibendum felis vitae molestie mattis nec semper cursus.",
+    label: "Client"
+  },
+  {
+    name: "Parsley Montana",
+    role: "Chief Executive Officer",
+    rating: 4.5,
+    image: "/images/testimonial/testimonial-img.png",
+    content: "Donec rutrum viverra aliquam a eros fruisque rhoncus vestibulum purus dignissim elit ultrices at. Nullam ut felis odio eget diam eget urna sodales vulputate. Morbi ut sodales dolor a porttitor nisi Phasellus bibendum felis vitae molestie mattis nec semper cursus.",
+    label: "Client"
+  },
+  {
+    name: "Parsley Montana",
+    role: "Chief Executive Officer",
+    rating: 2.5,
+    image: "/images/testimonial/testimonial-img.png",
+    content: "Donec rutrum viverra aliquam a eros fruisque rhoncus vestibulum purus dignissim elit ultrices at. Nullam ut felis odio eget diam eget urna sodales vulputate. Morbi ut sodales dolor a porttitor nisi Phasellus bibendum felis vitae molestie mattis nec semper cursus.",
+    label: "Client"
+  },
+  {
+    name: "Parsley Montana",
+    role: "Chief Executive Officer",
+    rating: 3.5,
+    image: "/images/testimonial/testimonial-img.png",
+    content: "Donec rutrum viverra aliquam a eros fruisque rhoncus vestibulum purus dignissim elit ultrices at. Nullam ut felis odio eget diam eget urna sodales vulputate. Morbi ut sodales dolor a porttitor nisi Phasellus bibendum felis vitae molestie mattis nec semper cursus.",
+    label: "Client"
+  }
+] %}
+
+{% set testimonialsThumbs = [
+  {
+    image: "/images/author/testimonial/author-1.jpg",
+    name: "Theodore Handle",
+    role: "Product Designer",
+    bgClass: ""
+  },
+  {
+    image: "/images/author/testimonial/author-2.jpg",
+    name: "Desmond Eagle",
+    role: "Driving Student",
+    bgClass: "ed-bg-2"
+  },
+  {
+    image: "/images/author/testimonial/author-3.jpg",
+    name: "Malcolm Function",
+    role: "Business Owner",
+    bgClass: "ed-bg-3"
+  },
+  {
+    image: "/images/author/testimonial/author-4.jpg",
+    name: "Valentino Morose",
+    role: "Chief Executive Officer",
+    bgClass: "ed-bg-4"
+  },
+  {
+    image: "/images/author/testimonial/author-3.jpg",
+    name: "Malcolm Function",
+    role: "Business Owner",
+    bgClass: "ed-bg-3"
+  }
+] %}
+
+
+<!-- testimonial area start -->
+<div class="ed-testimonial-area-2 ed-testimonial-bg-4">
+    <div class="container">
+        <div class="ed-testimonial-2-head">
+            <div class="row align-items-center">
+                <div class="col-xxl-6">
+                    <div class="ed-section-title-2">
+                        <h4 class="ed-title">
+                            Our Students' Opinions
+                        </h4>
+                    </div>
+                </div>
+                <div class="col-xxl-6">
+                    <div class="text-end">
+                        <div class="ed-navigation justify-content-end">
+                            <button class="ed-prev ed-testimonial-3-prev"><i class="fal fa-arrow-left"></i></button>
+                            <button class="ed-next ed-testimonial-3-next"><i class="fal fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ed-testimonial-content-area-2">
+            <div class="ed-testimonial-main-slider-2-active swiper ed-mb-30">
+                <div class="swiper-wrapper">
+                    {% import "components/testimonial/layout-2.html" as card %}
+                    {% for testimonial in testimonials %}
+                    <div class="swiper-slide">
+                         {{ card.testimonialCard(testimonial) }}
+                    </div>
+                    {% endfor %}
+                </div>
+                
+            </div>
+            <div class="ed-testimonial-user-pagination-controls">
+                <div class="ed-testimonial-2-paginate-controls swiper">
+                    <div class="swiper-wrapper">
+                        {% import "components/card/author-box/layout-1.html" as author %}
+                        {% for thumb in testimonialsThumbs %}
+                        <div class="swiper-slide">
+                            {{ author.authorBox(thumb) }}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- testimonial area end -->

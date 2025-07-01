@@ -1,0 +1,9 @@
+{% macro listTabTwo(categories, activeCategory) %}
+<div class="ed-related-course-tab-2">
+    {% for category in categories %}
+        <button class="{{ 'active' if category == activeCategory }}">
+            {{ category }}
+        </button>
+    {% endfor %}
+</div>
+{% endmacro %}

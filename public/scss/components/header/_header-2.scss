@@ -1,10 +1,13 @@
-.ed-head-banner-bg-wrapper {
-    background-color: #1B38A0;
+.ed-head-banner-bg-wrapper, .ed-primary-bg {
+    background-color: var(--ed-color-blue);
 }
 .ed-header-2-main-wrapper {
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 6px;
-  overflow: hidden;
+
+  .ed-md-wide-btn {
+    border-bottom-right-radius: 6px;
+  }
 }
 
 .ed-header-nav-2 {
