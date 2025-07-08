@@ -3,15 +3,15 @@
     <div class="container">
         <div class="ed-about-1-root-wrapper">
             <div class="row justify-content-end">
-                <div class="col-xxl-3">
+                <div class="col-xxl-3 order-last order-lg-first">
                     <div class="ed-about-1-img">
                         <img src="/images/banner/user-reading.png" alt="User Reading">
                     </div>
                 </div>
                 <div class="col-xxl-9">
                     <div class="ed-about-1-content-root-wrapper">
-                        <div class="row align-items-end">
-                            <div class="col-xxl-4">
+                        <div class="row align-items-center align-items-xl-end">
+                            <div class="col-xxl-4 col-lg-5">
                                 {% import "components/card/course/layout-bordered.html" as layoutBorder %}
                                 {% set course =
                                     {
@@ -29,7 +29,7 @@
                                         "originalPrice": 120,
                                         "rating": 4.5,
                                         "author_url": "#",
-                                        "author": "Desmond Eagle",
+                                        "author": "Desmond",
                                         "authorImg": "/images/author/teacher-1.png",
                                         "description": "Dolorous qualm quisque connecter adipescent impediment.",
                                         "features": [
@@ -40,7 +40,7 @@
                                     } %}
                                 {{ layoutBorder.courseCard(course) }}
                             </div>
-                            <div class="col-xxl-8">
+                            <div class="col-xxl-8 col-lg-7">
                                 <div class="ed-about-1-content">
                                     <h2 class="ed-title">Most Respected Free Online Programs</h2>
                                     <p>Fusce suscipit aliquet viverra blandit suscipit. Duis cursus tincidunt ullamcorper Aenean auctor magna vitae  quis laoreet mauris aliquet</p>

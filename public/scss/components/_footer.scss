@@ -92,3 +92,34 @@
     padding-top: 80px;
   }
 }
+
+
+
+// deletable css
+.footera-area {
+  background: #050C1F;
+}
+.ed-footer-social-full-width {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 65px;
+  padding-bottom: 45px;
+  li {
+    list-style-type: none;
+    border-right: 1px solid rgba(255, 255, 255, .1);
+    border-left: 1px solid rgba(255, 255, 255, .1);
+    flex-grow: 1;
+    text-align: center;
+    
+    a {
+      font-size: 24px;
+      font-weight: 600;
+      text-decoration: none;
+      color: rgba(255, 255, 255, .6);
+
+      &:hover {
+        color: var(--ed-color-white);
+      }
+    }
+  }
+}

@@ -22,7 +22,7 @@
 
     <div class="ed-content-bottom">
         <div class="row align-items-center">
-            <div class="col-xxl-8">
+            <div class="col-xxl-8 col-8">
                 <div class="ed-sm-author-box">
                     <div class="ed-img">
                         <img src="{{ courseInfo.authorImg }}" alt="Course Author">
@@ -32,7 +32,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xxl-4">
+            <div class="col-xxl-4 col-4">
                 {% import "components/rating/rating-count-only.html" as rating %}
                 {{ rating.courseRating(courseInfo.rating) }}
             </div>

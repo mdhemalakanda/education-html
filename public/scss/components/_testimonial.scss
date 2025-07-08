@@ -81,31 +81,90 @@
     overflow: hidden;
 
     .ed-flipped-text {
-        position: absolute;
+      position: absolute;
+      bottom: 46px;
+      right: 110px;
+
+      @media #{$xs} {
         bottom: 46px;
-        right: 110px;
+        right: 0;
+      }
     }
 
   .ed-image {
     max-width: 440px;
+
+    @media #{$xs} {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    @media #{$md} {
+      max-width: 330px;
+    }
+
+    img {
+      width: 100%;
+    }
   }
 
   .ed-content {
     max-width: calc(100% - 440px);
     padding-left: 90px;
     padding-right: 70px;
+
+    @media #{$xs} {
+      max-width: 100%;
+      padding: 25px 20px;
+    }
+
+    @media #{$md} {
+      padding-left: 30px;
+      padding-right: 30px;
+      max-width: calc(100% - 330px);
+      flex-grow: 1;
+    }
+
+    @media #{$lg} {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
   }
 }
 
 .ed-testimonial-area-2 {
   .ed-rating-stars {
     margin-bottom: 25px;
+
+    @media #{$xs} {
+      margin-bottom: 15px;
+    }
+
+    @media #{$md} {
+      margin-bottom: 9px;
+    }
   }
 
   p {
     font-size: 20px;
     margin-bottom: 52px;
+    position: relative;
+    z-index: 1;
+
+    @media #{$xs} {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    @media #{$md} {
+      margin-bottom: 20px;
+    }
   }
+}
+
+.ed-sm-user-content-box {
+  position: relative;
+  z-index: 1;
 }
 
 .ed-flipped-text {
@@ -119,6 +178,10 @@
   line-height: 1;
   letter-spacing: 5px;
   margin-bottom: 0;
+
+  @media #{$xs} {
+    font-size: 30px;
+  }
 }
 
 .ed-testimonial-bg-4 {
@@ -128,3 +191,4 @@
         background-position: top right;
     }
 }
+

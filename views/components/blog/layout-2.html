@@ -39,7 +39,7 @@
         <div class="row">
         {% import "components/card/blog/layout-2.html" as blog %}
         {% for post in blogPosts %}
-            <div class="col-xxl-4">
+            <div class="col-xxl-4 col-sm-6 col-lg-4 ed-mb-30">
                 {{ blog.BlogCard(post) }}
             </div>
         {% endfor %}

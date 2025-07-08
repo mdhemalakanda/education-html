@@ -51,7 +51,7 @@
                 575: {
                     slidesPerView: 1,
                 },
-                767: {
+                768: {
                     slidesPerView: 2,
                 },
                 768: {
@@ -82,7 +82,7 @@
                 575: {
                     slidesPerView: 1,
                 },
-                767: {
+                768: {
                     slidesPerView: 2,
                 },
                 768: {
@@ -116,7 +116,7 @@
                 575: {
                     slidesPerView: 1,
                 },
-                767: {
+                768: {
                     slidesPerView: 2,
                 },
                 992: {
@@ -138,11 +138,11 @@
                 prevEl: '.ed-instructor-2-prev',
             },
             breakpoints: {
-                575: {
-                    slidesPerView: 1,
-                },
-                767: {
+                576: {
                     slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 1,
                 },
                 992: {
                     slidesPerView: 2
@@ -153,11 +153,25 @@
         // testimonial 2 active.
         const testimonialTwoControls = new Swiper('.ed-testimonial-2-paginate-controls', {
             loop: false,
-            slidesPerView: 4,
             spaceBetween: 30,
             watchSlidesProgress: true,
             slideToClickedSlide: true,
             allowTouchMove: true,
+
+            breakpoints: {
+                576: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                992: {
+                    slidesPerView: 3
+                },
+                1200: {
+                    slidesPerView: 4
+                }
+            }
         });
 
         const testimonialTwoActive = new Swiper('.ed-testimonial-main-slider-2-active', {
@@ -169,7 +183,7 @@
             },
             thumbs: {
                 swiper: testimonialTwoControls,
-            },
+            }
         });
 
    })

@@ -14,7 +14,7 @@
     "originalPrice": 120,
     "rating": 4.5,
     "author_url": "#",
-    "author": "Desmond Eagle",
+    "author": "Desmond",
     "authorImg": "/images/author/teacher-1.png",
     "description": "Dolorous qualm quisque connecter adipescent impediment.",
     "features": [
@@ -134,7 +134,7 @@
     "originalPrice": 115,
     "rating": 4.5,
     "author_url": "#",
-    "author": "Desmond Eagle",
+    "author": "Desmond",
     "authorImg": "/images/author/teacher-3.png",
     "description": "Build smart models, from linear regression to neural nets.",
     "features": [
@@ -209,8 +209,8 @@
         <div class="ed-related-course-grid-view-2">
             <div class="row">
                 {% for course in courses %}
-                <div class="col-xxl-3">
-                    <div class="ed-course-border-box-root-2 ed-mb-20">
+                <div class="col-xxl-3 col-sm-6 col-lg-4">
+                    <div class="ed-course-border-box-root-2 ed-mb-30">
                         {% import "components/card/course/layout-bordered.html" as layoutBorder %}
                         {{ layoutBorder.courseCard(course) }}
                         {% import "components/card/course/content/layout-1.html" as courseContent %}

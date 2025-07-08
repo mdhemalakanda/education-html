@@ -25,6 +25,18 @@
   display: flex;
   grid-gap: 30px;
 
+  @media #{$xs, $sm} {
+    padding: 13px 15px;
+  }
+
+  @media #{$sm} {
+    grid-gap: 10px;
+  }
+
+  @media #{$lg} {
+    padding: 13px 15px;
+  }
+
   li {
     display: inline-block;
     position: relative;
@@ -39,6 +51,10 @@
       right: -15px;
       top: 50%;
       transform: translateY(-50%);
+
+      @media #{$sm} {
+        right: -6px;
+      }
     }
 
     a {

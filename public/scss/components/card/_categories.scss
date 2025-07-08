@@ -64,6 +64,10 @@
   background: #F6E7F8;
   border: 1px solid #D0E1E2;
 
+  @media #{$xs, $lg} {
+    padding: 20px;
+  }
+
   .ed-title {
     font-size: 20px;
     font-weight: 600;
@@ -87,4 +91,9 @@
     font-size: 15px;
     margin-bottom: 26px;
   }
+}
+
+
+.ed-category-left-banner-img-2 img {
+    width: 100%;
 }

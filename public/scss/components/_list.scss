@@ -43,6 +43,10 @@
       align-items: center;
       transition: border-color 0.3s;
 
+      @media #{$xs} {
+        padding: 12px 15px;
+      }
+
       &:hover {
         border-color: var(--ed-color-sweet);
       }
@@ -60,10 +64,18 @@
         color: var(--ed-color-body);
         margin-bottom: 0;
         line-height: 1;
+
+        @media #{$xs} {
+          font-size: 16px;
+        }
       }
 
       .ed-count {
         margin-right: 13px;
+
+        @media #{$xs} {
+          margin-right: 5px;
+        }
       }
 
       .ed-navigate {
@@ -77,6 +89,12 @@
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s;
+
+        @media #{$xs} {
+          width: 24px;
+          height: 24px;
+          line-height: 24px;
+        }
 
         i {
           font-size: 12px;

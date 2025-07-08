@@ -64,6 +64,10 @@
 
     img {
       transition: all 0.3s;
+
+      @media #{$xs} {
+        width: 100%;
+      }
     }
   }
 
@@ -136,11 +140,21 @@
 }
 
 .ed-section-blog-space-2 {
-    padding-top: 110px;
+  padding-top: 110px;
+  padding-bottom: 90px;
+
+  @media #{$xs} {
+    padding-top: 60px;
+    padding-bottom: 65px;
+  }
 }
 
 .ed-news-area {
-    .ed-section-title-2 {
-        margin-bottom: 50px;
+  .ed-section-title-2 {
+    margin-bottom: 50px;
+
+    @media #{$xs} {
+      margin-bottom: 30px;
     }
+  }
 }

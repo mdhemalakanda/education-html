@@ -2,18 +2,46 @@
     border-radius: 10px;
     padding: 40px 50px;
 
+    @media #{$xs} {
+        padding: 20px;
+    }
+
     .ed-title {
         font-size: 30px;
         font-weight: 500;
         color: var(--ed-color-white);
         margin-bottom: 0;
+
+        @media #{$xs} {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        @media #{$md, $lg} {
+            margin-bottom: 30px;
+        }
     }
 }
 
 .ed-rounded-form .ed-subscribe-form-input-area {
     border-radius: 10px;
+    
+    @media #{$xs} {
+        padding: 5px 10px;
+        padding-bottom: 15px;
+    }
+
+    .ed-wide-btn {
+        @media #{$xs} {
+            width: 100%;
+        }
+    }
 }
 
 .ed-subscribe-space-top-2 {
     margin-top: -75px;
+
+    @media #{$xs, $md, $lg} {
+        margin-top: 65px;
+    }
 }

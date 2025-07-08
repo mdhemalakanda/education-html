@@ -13,6 +13,15 @@
 .ed-header-nav-2 {
     padding: 0 40px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+
+    @media #{$xs, $md} {
+      padding: 15px;
+    }
+
+    @media #{$lg, $xl} {
+      padding: 35px 30px;
+      padding-top: 17px;
+    }
 }
 
 .ed-logo-2 {
@@ -38,6 +47,10 @@
           color: var(--ed-color-white);
           padding: 34px 0;
           display: inline-block;
+
+          @media #{$lg, $xl} {
+            padding: 25px 0;
+          }
 
           &:hover {
             color: var(--ed-color-sweet);
@@ -78,6 +91,10 @@
 .ed-header-2-main-wrapper {
   .ed-header-bottom-2 {
     padding-left: 40px;
+
+    @media #{$lg, $xl} {
+      padding-left: 20px;
+    }
   }
 
   .ed-header-bottom-right-2 {

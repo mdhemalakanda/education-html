@@ -29,5 +29,9 @@
     .ed-title {
         font-size: 40px;
         font-weight: 600;
+
+        @media #{$xs} {
+            font-size: 26px;
+        }
     }
 }

@@ -20,8 +20,21 @@
     border-radius: 6px;
     overflow: hidden;
 
+    @media #{$xs, $md} {
+        flex-wrap: wrap;
+        grid-gap: 30px;
+    }
+
     .ed-category-left-image-2 {
         flex: 0 0 471px;
+
+        @media #{$xs, $md} {
+            flex: 0 0 100%;
+        }
+
+        @media #{$lg} {
+            flex: 0 0 419px;
+        }
     }
 
     .ed-category-right-content-2 {
@@ -31,8 +44,16 @@
 
 .ed-category-banner-section-2-space {
     padding-top: 110px;
+
+    @media #{$xs} {
+        padding-top: 60px;
+    }
 }
 
 .ed-category-2-area .ed-section-title-2 .ed-title {
     margin-bottom: 50px;
+
+    @media #{$xs} {
+        margin-bottom: 38px;
+    }
 }

@@ -17,3 +17,9 @@
     }
   }
 }
+
+.ed-testimonial-2-head .ed-navigation {
+  @media #{$xs} {
+    margin-top: 10px;
+  }
+}
