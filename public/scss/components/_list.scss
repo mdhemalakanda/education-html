@@ -112,3 +112,51 @@
     }
   }
 }
+
+.ed-regular-list-2-col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px 20px;
+
+  li {
+    list-style: none;
+    color: var(--ed-color-body);
+    font-size: 14px;
+
+    i {
+      font-size: 14.3px;
+      min-width: 16px;
+      margin-right: 6px;
+    }
+  }
+}
+
+
+.ed-bullet-list {
+  &.ed-2-col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  li {
+    list-style: none;
+    font-size: 14px;
+    color: var(--ed-color-body);
+    display: flex;
+    grid-gap: 10px;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    & .ed-bullete {
+      width: 6px;
+      height: 6px;
+      background-color: var(--ed-color-primary);
+      display: inline-block;
+      content: "";
+      flex: 0 0 auto;
+      border-radius: 10px;
+      transform: translateY(6px);
+    }
+  }
+}

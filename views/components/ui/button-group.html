@@ -1,0 +1,7 @@
+{% macro filterButtons(buttons=[], activeLabel="") %}
+<div class="ed-filter-button-group">
+  {% for label in buttons %}
+    <button class="{% if label == activeLabel %}active{% endif %}">{{ label }}</button>
+  {% endfor %}
+</div>
+{% endmacro %}

@@ -74,7 +74,7 @@
 }
 
 @media (min-width: 1400px) {
-    .ed-related-course-grid-view-2 .row > *:nth-child(4n) .ed-course-card-popup-desc {
+    .ed-archive-course-grid-col-4 .row > *:nth-child(4n) .ed-course-card-popup-desc {
         left: auto;
         right: calc(100% + 30px);
         
@@ -84,9 +84,8 @@
             transform: rotateY(180deg);
         }
     }
-
 }
-.ed-related-course-grid-view-2 .row > *:nth-child(2n) .ed-course-card-popup-desc {
+.ed-archive-course-grid-col-4 .row > *:nth-child(2n) .ed-course-card-popup-desc {
     @media #{$md} {
         left: auto;
         right: calc(100% + 30px);
@@ -101,7 +100,7 @@
     }
 }
 
-.ed-related-course-grid-view-2 .row > *:nth-child(3n) .ed-course-card-popup-desc {
+.ed-archive-course-grid-col-4 .row > *:nth-child(3n) .ed-course-card-popup-desc {
     @media #{$lg, $xl} {
         left: auto;
         right: calc(100% + 30px);
@@ -116,7 +115,13 @@
     }
 }
 
-.rbt-related-course-space-2 {
+.ed-archive-course-grid-col-4 .row > * .ed-course-card-popup-desc {
+    @media #{$md} {
+        
+    }
+}
+
+.ed-related-course-space-2 {
     padding-top: 120px;
     padding-bottom: 90px;
 
@@ -131,3 +136,5 @@
     }
 
 }
+
+

@@ -1,0 +1,18 @@
+{% macro breadcrumb(title, list) %}
+<div class="rd-breadcrumb-banner bg-soft-green rbt-breadcrumb-space-top ed-braedcrumb-bg-img">
+    <div class="container">
+        <h2 class="ed-title">{{ title }}</h2>
+        <ul class="ed-breadcrumb-list">
+            {% for item in list %}
+                <li>
+                    {% if item.url %}
+                        <a href="{{ item.url }}">{{ item.label }}</a>
+                    {% else %}
+                        <span>{{ item.label }}</span>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endmacro %}

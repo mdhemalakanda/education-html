@@ -1,7 +1,7 @@
-{% macro courseCard(courseInfo) %}
-<div class="ed-course-card-bordered-2">
+{% macro courseCard(courseInfo, class = '') %}
+<div class="ed-course-card-bordered-2 {{class}}">
     <div class="ed-image">
-        <img src="{{courseInfo.image}}" alt="">
+        <a href="{{courseInfo.permalink}}"><img src="{{courseInfo.image}}" alt="Course image"></a>
         <a href="{{courseInfo.category_url}}" class="ed-badge badge-danger ed-badge-rounded">Learning</a>
         <a href="{{courseInfo.wishlist_url}}" class="ed-course-action-icon-btn"><i class="fal fa-heart"></i></a>
     </div>

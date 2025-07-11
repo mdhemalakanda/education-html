@@ -1,0 +1,20 @@
+{% macro renderFilterWidget(title, items, widget_class = '') %}
+<div class="ed-filter-widget {{widget_class}}">
+    <div class="ed-filter-title">
+        <h5 class="ed-title">{{ title }}</h5>
+        <button class="ed-filter-collapse"><i class="fal fa-minus"></i></button>
+    </div>
+    <div class="ed-filter-widget-list-wrapper">
+        <div class="ed-filter-widget-list">
+            <ul>
+                {% for category in items %}
+                <li>
+                    <input type="checkbox" name="{{ category.name }}" id="{{ category.id }}">
+                    <label for="{{ category.id }}">{{ category.label }}</label>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endmacro %}

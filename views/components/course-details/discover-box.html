@@ -1,0 +1,9 @@
+{% macro courseDiscover(title, description, items) %}
+  <div class="ed-course-discover-content ed-scrollbar">
+    {% import "components/title/course-details-sm-title.html" as titleComponent %}
+    {{ titleComponent.getTItle(title) }}
+    <p>{{ description }}</p>
+   {% import "components/list/layout-4.html" as list %}
+    {{ list.bulletList(items, 'ed-2-col') }}
+  </div>
+{% endmacro %}

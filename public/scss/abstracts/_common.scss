@@ -55,7 +55,9 @@ h6, .ed-h6 {
 }
 
 .container {
+  @media (min-width: 1600px) {
     max-width: 1320px;
+  } 
 }
 
 .row {
@@ -181,9 +183,14 @@ img {
 .ed-bg-white {
     background-color: var(--ed-color-white);
 }
+
+.bg-soft-green {
+  background-color: var(--color-soft-green);
+}
+
 hr {
     background: var(--ed-color-border);
 }
 .bg-soft-primary {
-  background-color: #EDF2F6;
+  background-color: var(--ed-color-soft-primary);
 }

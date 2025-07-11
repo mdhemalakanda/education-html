@@ -1,0 +1,15 @@
+{% macro gridListSwitch(showingText="") %}
+<div class="ed-course-grid-list-wrapper">
+  <div class="ed-course-filter-grid-list-switch">
+    <button class="active">
+      <i class="fal fa-grid"></i> Grid
+    </button>
+    <button>
+      <i class="fal fa-list"></i> List
+    </button>
+  </div>
+  {% if showingText %}
+    <p>{{ showingText }}</p>
+  {% endif %}
+</div>
+{% endmacro %}

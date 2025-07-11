@@ -1,5 +1,5 @@
-{% macro courseContent(courseInfo) %}
-<div class="ed-course-card-popup-desc">
+{% macro courseContent(courseInfo, class = '') %}
+<div class="ed-course-card-popup-desc {{class}}">
     {% import "components/meta/meta-transparent-2.html" as meta %}
     {{ meta.courseMeta(courseInfo.lessons, courseInfo.students) }}
     <h5 class="ed-title ed-title-border-box-2"><a href="{{courseInfo.permalink}}">{{ courseInfo.title }}</a></h5>

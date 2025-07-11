@@ -1,0 +1,8 @@
+{% macro edRegularButton(text, href="#", iconClass="fal fa-arrow-right") %}
+<a href="{{ href }}" class="ed-regular-button">
+  {{ text }}
+  {% if iconClass %}
+    <i class="{{ iconClass }}"></i>
+  {% endif %}
+</a>
+{% endmacro %}

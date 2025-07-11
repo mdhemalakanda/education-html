@@ -1,0 +1,440 @@
+{% set courses = [
+  {
+    "id": 1,
+    "image": "/images/course/card-bordered/related-course-card-1.jpg",
+    "category_url": "#",
+    "category": "Learning",
+    "wishlist_url": "#",
+    "permalink": "#",
+    "title": "Professional-Level Graphic Design Course.",
+    "lessons": 34,
+    "students": 78,
+    "add_cart_url": "#",
+    "price": 96,
+    "originalPrice": 120,
+    "rating": 4.5,
+    "author_url": "#",
+    "author": "Desmond",
+    "authorImg": "/images/author/teacher-1.png",
+    "description": "Dolorous qualm quisque connecter adipescent impediment.",
+    "features": [
+      "Eita quad ex rhonchus vitae lectors in digicam pharetra ipsum.",
+      "Magmas dis parturient mantes",
+      "Morbi critique lorem sit a met arco utricles tempus."
+    ]
+  },
+  {
+    "id": 2,
+    "image": "/images/course/card-bordered/related-course-card-2.jpg",
+    "category_url": "#",
+    "category": "Art & Design",
+    "wishlist_url": "#",
+    "permalink": "#",
+    "title": "Pixel Art Mastery Lessons: Novice to Master.",
+    "lessons": 38,
+    "students": 56,
+    "add_cart_url": "#",
+    "price": 0,
+    "originalPrice": 88,
+    "rating": 4.5,
+    "author_url": "#",
+    "author": "Poly Gone",
+    "authorImg": "/images/author/teacher-2.png",
+    "description": "Pixel art design from scratch, including shading and retro animation.",
+    "features": [
+      "Retro style guide",
+      "Hands-on project samples",
+      "Upload and critique sessions"
+    ]
+  },
+  {
+    "id": 3,
+    "image": "/images/course/card-bordered/related-course-card-3.jpg",
+    "category_url": "#",
+    "category": "Science",
+    "wishlist_url": "#",
+    "permalink": "#",
+    "title": "AI-Driven Digital Marketing Mastery Classes",
+    "lessons": 44,
+    "students": 62,
+    "add_cart_url": "#",
+    "price": 59,
+    "originalPrice": 79,
+    "rating": 4.5,
+    "author_url": "#",
+    "author": "Elon Gated",
+    "authorImg": "/images/author/teacher-3.png",
+    "description": "Build automated AI funnels and strategy with real case studies.",
+    "features": [
+      "AI content generator tools",
+      "Targeting + ROI dashboards",
+      "Campaign optimization tips"
+    ]
+  },
+  {
+    "id": 4,
+    "image": "/images/course/card-bordered/related-course-card-4.jpg",
+    "category_url": "#",
+    "category": "Finance",
+    "wishlist_url": "#",
+    "permalink": "#",
+    "title": "Ultimate Guide to Graphic Design Theory",
+    "lessons": 39,
+    "students": 66,
+    "add_cart_url": "#",
+    "price": 72,
+    "originalPrice": 110,
+    "rating": 4.5,
+    "author_url": "#",
+    "author": "Claire Voyant",
+    "authorImg": "/images/author/teacher-1.png",
+    "description": "Master the principles of layout, typography, and composition.",
+    "features": [
+      "Color and contrast psychology",
+      "Modern typography trends",
+      "Real-world projects"
+    ]
+  },
+  {
+    "id": 5,
+    "image": "/images/course/card-bordered/related-course-card-5.jpg",
+    "category_url": "#",
+    "category": "Technology",
+    "wishlist_url": "#",
+    "permalink": "#",
+    "title": "Crucial Cloud Computing Components",
+    "lessons": 35,
+    "students": 55,
+    "add_cart_url": "#",
+    "price": 90,
+    "originalPrice": 120,
+    "rating": 4.5,
+    "author_url": "#",
+    "author": "Miles Tone",
+    "authorImg": "/images/author/teacher-4.png",
+    "description": "Get hands-on with cloud architecture, storage, and services.",
+    "features": [
+      "AWS / Azure quickstart",
+      "Deploy serverless apps",
+      "Security and scaling tips"
+    ]
+  },
+  {
+    "id": 6,
+    "image": "/images/course/card-bordered/related-course-card-6.jpg",
+    "category_url": "#",
+    "category": "Expert",
+    "wishlist_url": "#",
+    "permalink": "#",
+    "title": "Machine Learning and Artificial Intelligence",
+    "lessons": 42,
+    "students": 73,
+    "add_cart_url": "#",
+    "price": 80,
+    "originalPrice": 115,
+    "rating": 4.5,
+    "author_url": "#",
+    "author": "Desmond",
+    "authorImg": "/images/author/teacher-3.png",
+    "description": "Build smart models, from linear regression to neural nets.",
+    "features": [
+      "No-code + Python ML",
+      "Train your own AI bots",
+      "Capstone project with certificate"
+    ]
+  },
+  {
+    "id": 7,
+    "image": "/images/course/card-bordered/related-course-card-7.jpg",
+    "category_url": "#",
+    "category": "Intermediate",
+    "wishlist_url": "#",
+    "permalink": "#",
+    "title": "High-Level Graphic Design Course: Perfect Design",
+    "lessons": 42,
+    "students": 74,
+    "add_cart_url": "#",
+    "price": 79,
+    "originalPrice": 100,
+    "rating": 4.5,
+    "author_url": "#",
+    "author": "Guy Mann",
+    "authorImg": "/images/author/teacher-2.png",
+    "description": "Explore depth, grids, and responsive visuals at an advanced level.",
+    "features": [
+      "Advanced Figma/UI tips",
+      "Responsive layout tools",
+      "Design system templates"
+    ]
+  },
+  {
+    "id": 8,
+    "image": "/images/course/card-bordered/related-course-card-3.jpg",
+    "category_url": "#",
+    "category": "Web Development",
+    "wishlist_url": "#",
+    "permalink": "#",
+    "title": "Gain web developer credentials: HTML CSS.",
+    "lessons": 34,
+    "students": 78,
+    "add_cart_url": "#",
+    "price": 0,
+    "originalPrice": 45,
+    "rating": 4.5,
+    "author_url": "#",
+    "author": "Miles Tone",
+    "authorImg": "/images/author/teacher-1.png",
+    "description": "HTML & CSS from beginner to job-ready frontend web developer.",
+    "features": [
+      "Live code examples",
+      "Visual layout tools",
+      "Portfolio-ready projects"
+    ]
+  }
+]
+%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% include "partials/head.html" %}
+</head>
+<body>
+    <!-- header area start -->
+    <header class="ed-header-area">
+        {% include "components/header/layout-1/topbar.html" %}
+        {% include "components/header/layout-1/middle.html" %}
+        {% include "components/header/layout-1/nav.html" %}
+    </header>
+    <!-- header area end -->
+
+    {% from "components/breadcrumb/layout-1.html" import breadcrumb %}
+
+    {{ breadcrumb("Course", [
+        { label: "Home", url: "/" },
+        { label: "Course" }
+    ]) }}
+
+
+    <div class="ed-course-archive-area ed-course-archive-space-top">
+        <div class="container">
+            <div class="ed-course-filter-top-area">
+                <div class="row align-items-center">
+                    <div class="col-xxl-6 col-lg-6">
+                        {% import "components/ui/list-grid-button.html" as ui %}
+                        {{ ui.gridListSwitch("Showing items 1–6 of a total of 30") }}
+                    </div>
+
+                    <div class="col-xxl-6 col-lg-6">
+                        <div class="ed-course-filter-button-flex-wrapper">
+                            {% import "components/form/form-search-2.html" as forms %}
+                            {{ forms.searchForm("Find a course...") }}
+                            {% from "components/button/button-regular-2.html" import filterButton %}
+                            {{ filterButton() }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ed-archive-course-row">
+                <div class="ed-archive-course-col-sidebar  d-none d-lg-block">
+                    <div class="ed-course-archive-filter-wrapper ed-course-archive-filter-wrapper-space">
+                            <div class="row">
+                                <div class="col-12">
+                                    {% import "components/widgets/archive/course-filter.html" as widgets %}
+
+                                    {% set items = [
+                                    { name: "category-1", id: "category-1", label: "Art & Design" },
+                                    { name: "category-2", id: "category-2", label: "Strength Workouts" },
+                                    { name: "category-3", id: "category-3", label: "Personal Development" },
+                                    { name: "category-4", id: "category-4", label: "Devotional Practice" },
+                                    { name: "category-5", id: "category-5", label: "Video Edition" },
+                                    { name: "category-6", id: "category-6", label: "Web Design" },
+                                    { name: "category-7", id: "category-7", label: "Finance & Accounting" }
+                                    ] %}
+
+                                    {{ widgets.renderFilterWidget("All Categories", items, 'ed-widget-category ed-widget-transparent') }}
+
+                                </div>
+                                <div class="col-12">
+                                    {% import "components/widgets/archive/course-filter.html" as widgets %}
+
+                                    {% set items = [
+                                    { name: "sort-1", id: "sort-1", label: "Default" },
+                                    { name: "sort-2", id: "sort-2", label: "Latest" },
+                                    { name: "sort-3", id: "sort-3", label: "Oldest" },
+                                    { name: "sort-4", id: "sort-4", label: "Course Title (a-z)" }
+                                    ] %}
+
+                                    {{ widgets.renderFilterWidget("Sort By", items, 'ed-widget-sort ed-widget-transparent') }}
+
+                                </div>
+                                <div class="col-12">
+                                    {% import "components/widgets/archive/course-filter.html" as widgets %}
+
+                                    {% set items = [
+                                    { name: "lectures-1", id: "lectures-1", label: "Desmond Eagle" },
+                                    { name: "lectures-2", id: "lectures-2", label: "Hugh Saturation" },
+                                    { name: "lectures-3", id: "lectures-3", label: "Jason Response" },
+                                    { name: "lectures-4", id: "lectures-4", label: "Nathaneal Down" },
+                                    { name: "lectures-5", id: "lectures-5", label: "Dianne Ameter" },
+                                    { name: "lectures-6", id: "lectures-6", label: "Fletch Skinner" },
+                                    { name: "lectures-7", id: "lectures-7", label: "Theodore Handle" }
+                                    ] %}
+
+                                    {{ widgets.renderFilterWidget("Lecturers", items, 'ed-widget-sort ed-widget-transparent') }}
+
+                                </div>
+                                <div class="col-12">
+                                    {% import "components/widgets/archive/course-filter.html" as widgets %}
+
+                                    {% set items = [
+                                    { name: "price-1", id: "price-1", label: "All" },
+                                    { name: "price-2", id: "price-2", label: "Free" },
+                                    { name: "price-3", id: "price-3", label: "Paid" }
+                                    ] %}
+
+                                    {{ widgets.renderFilterWidget("Price", items, 'ed-widget-price ed-widget-transparent') }}
+
+                                </div>
+                                <div class="col-12">
+                                    {% import "components/widgets/archive/course-filter.html" as widgets %}
+
+                                    {% set items = [
+                                    { name: "labels-1", id: "labels-1", label: "All Levels" },
+                                    { name: "labels-2", id: "labels-2", label: "Beginner" },
+                                    { name: "labels-3", id: "labels-3", label: "Intermediate" },
+                                    { name: "labels-4", id: "labels-4", label: "Expert" }
+                                    ] %}
+
+                                    {{ widgets.renderFilterWidget("Levels", items, 'ed-widget-labels ed-widget-transparent') }}
+
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="ed-archive-course-col-content">
+                    <div class="ed-course-archive-grid-space ed-has-left-filter">
+                        <div class="ed-archive-course-grid-col-3 ed-has-left-filter ed-course-archive-inner-space-1">
+                            <div class="row">
+                                {% for course in courses %}
+                                <div class="col-xxl-4 col-sm-6 col-lg-6 col-md-6">
+                                    <div class="ed-course-border-box-root-2 ed-mb-30">
+                                        {% import "components/card/course/layout-bordered.html" as layoutBorder %}
+                                        {{ layoutBorder.courseCard(course, 'ed-has-blue-card') }}
+                                        {% import "components/card/course/content/layout-1.html" as courseContent %}
+                                        {{ courseContent.courseContent(course, 'ed-has-blue-card') }}
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="ed-archive-course-action-wrapper">
+                            {% import "components/button/button-regular.html" as buttons %}
+                            {{ buttons.edRegularButton("Load More", "/courses", "fal fa-arrow-right") }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- offcanvas -->
+    <div class="ed-course-archive-offcanvas d-lg-none">
+        <div class="ed-course-archive-offcanvas-top-head">
+          <div class="row align-items-center">
+            <div class="col-8">
+              <div class="offcanvas-logo">
+                <a href="#"><img src="/images/logo.png" alt=""></a>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="text-end">
+                <button class="ed-offcanvas-close-btn"><i class="fal fa-times"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ed-course-archive-filter-wrapper">
+            <div class="ed-offcanvas-item-single">
+                {% import "components/widgets/archive/course-filter.html" as widgets %}
+
+                {% set items = [
+                { name: "category-1", id: "category-1", label: "Art & Design" },
+                { name: "category-2", id: "category-2", label: "Strength Workouts" },
+                { name: "category-3", id: "category-3", label: "Personal Development" },
+                { name: "category-4", id: "category-4", label: "Devotional Practice" },
+                { name: "category-5", id: "category-5", label: "Video Edition" },
+                { name: "category-6", id: "category-6", label: "Web Design" },
+                { name: "category-7", id: "category-7", label: "Finance & Accounting" }
+                ] %}
+
+                {{ widgets.renderFilterWidget("All Categories", items, 'ed-widget-category ed-widget-transparent') }}
+
+            </div>
+            <div class="ed-offcanvas-item-single">
+                {% import "components/widgets/archive/course-filter.html" as widgets %}
+
+                {% set items = [
+                { name: "sort-1", id: "sort-1", label: "Default" },
+                { name: "sort-2", id: "sort-2", label: "Latest" },
+                { name: "sort-3", id: "sort-3", label: "Oldest" },
+                { name: "sort-4", id: "sort-4", label: "Course Title (a-z)" }
+                ] %}
+
+                {{ widgets.renderFilterWidget("Sort By", items, 'ed-widget-sort ed-widget-transparent') }}
+
+            </div>
+            <div class="ed-offcanvas-item-single">
+                {% import "components/widgets/archive/course-filter.html" as widgets %}
+
+                {% set items = [
+                { name: "lectures-1", id: "lectures-1", label: "Desmond Eagle" },
+                { name: "lectures-2", id: "lectures-2", label: "Hugh Saturation" },
+                { name: "lectures-3", id: "lectures-3", label: "Jason Response" },
+                { name: "lectures-4", id: "lectures-4", label: "Nathaneal Down" },
+                { name: "lectures-5", id: "lectures-5", label: "Dianne Ameter" },
+                { name: "lectures-6", id: "lectures-6", label: "Fletch Skinner" },
+                { name: "lectures-7", id: "lectures-7", label: "Theodore Handle" }
+                ] %}
+
+                {{ widgets.renderFilterWidget("Lecturers", items, 'ed-widget-sort ed-widget-transparent') }}
+
+            </div>
+            <div class="ed-offcanvas-item-single">
+                {% import "components/widgets/archive/course-filter.html" as widgets %}
+
+                {% set items = [
+                { name: "price-1", id: "price-1", label: "All" },
+                { name: "price-2", id: "price-2", label: "Free" },
+                { name: "price-3", id: "price-3", label: "Paid" }
+                ] %}
+
+                {{ widgets.renderFilterWidget("Price", items, 'ed-widget-price ed-widget-transparent') }}
+
+            </div>
+            <div class="ed-offcanvas-item-single">
+                {% import "components/widgets/archive/course-filter.html" as widgets %}
+
+                {% set items = [
+                { name: "labels-1", id: "labels-1", label: "All Levels" },
+                { name: "labels-2", id: "labels-2", label: "Beginner" },
+                { name: "labels-3", id: "labels-3", label: "Intermediate" },
+                { name: "labels-4", id: "labels-4", label: "Expert" }
+                ] %}
+
+                {{ widgets.renderFilterWidget("Levels", items, 'ed-widget-labels ed-widget-transparent') }}
+
+            </div>
+        </div>
+    </div>
+    <div class="ed-offcanvas-overlay d-lg-none"></div>
+
+    {% include "components/footer/layout-1.html" %}
+
+    {% include "partials/scripts.html" %}
+</body>
+</html>

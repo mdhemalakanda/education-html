@@ -426,3 +426,11 @@
         padding-top: 50px;
     }
 }
+
+.rd-breadcrumb-banner {
+    .ed-title {
+        @media #{$xs} {
+            font-size: 40px;
+        }
+    }
+}

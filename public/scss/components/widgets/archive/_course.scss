@@ -1,0 +1,118 @@
+.ed-filter-widget {
+  .ed-filter-title {
+    display: flex;
+    justify-content: space-between;
+    background: var(--ed-color-soft-primary);
+    padding: 13px 30px;
+    align-items: center;
+
+    .ed-title {
+      font-size: 16px;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    button {
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--ed-color-black);
+    }
+  }
+
+  .ed-filter-widget-list {
+    padding: 20px 30px;
+    height: 100%;
+
+    ul {
+      li {
+        list-style: none;
+        position: relative;
+        margin-bottom: 2px;
+
+        input[type="checkbox"] {
+          display: none;
+        }
+
+        label {
+          color: var(--ed-color-body);
+          font-size: 14px;
+
+          &::before {
+            content: "";
+            border: 1px solid var(--ed-color-border-soft);
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 4px;
+            transform: translateY(3px);
+            margin-right: 7px;
+            transition: all 0.3s;
+          }
+
+          &::after {
+            position: absolute;
+            left: 3px;
+            top: 4px;
+            content: "\f00c";
+            font-family: "Font awesome 6 pro";
+            font-size: 11px;
+            color: var(--ed-color-primary);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+          }
+        }
+
+        input:checked {
+          ~ label {
+            &::before {
+              border-color: var(--ed-color-primary);
+            }
+
+            &::after {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ed-course-archive-filter-wrapper {
+  > .row {
+    > *:last-child {
+      .ed-filter-widget {
+        border-right: 0 !important;
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
+.ed-filter-widget {
+  &.ed-widget-transparent {
+    padding: 30px;
+    border-bottom: 1px solid var(--ed-color-border-soft);
+    border-right: 0;
+
+    @media #{$xs} {
+      padding: 20px;
+    }
+
+    .ed-filter-title {
+      padding: 0;
+      background: transparent;
+      border-bottom: 1px solid var(--ed-color-border-soft);
+      padding-bottom: 7px;
+    }
+
+    .ed-filter-widget-list {
+      padding: 0;
+      height: auto;
+      padding-top: 10px;
+    }
+  }
+}

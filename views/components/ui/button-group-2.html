@@ -1,0 +1,7 @@
+{% macro buttonGroup(items) %}
+  <ul class="ed-button-group-2">
+    {% for item in items %}
+      <li><a href="{{ item.url | default('#') }}">{{ item.label }}</a></li>
+    {% endfor %}
+  </ul>
+{% endmacro %}

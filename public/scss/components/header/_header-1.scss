@@ -157,10 +157,6 @@
 
 .ed-header-menu-area {
     background-color: var(--ed-color-black);
-
-    .ed-header-nav {
-        padding-left: 20px;
-    }
 }
 
 .ed-header-nav {
@@ -171,7 +167,7 @@
             & a {
                 text-decoration: none;
                 color: var(--ed-color-soft-white);
-                padding: 23px 30px;
+                padding: 18px 30px;
                 display: inline-block;
                 border-right: 1px solid rgba(255, 255, 255, 0.20);
 
@@ -197,7 +193,7 @@
 }
 
 .ed-header-search-box {
-    max-width: 320px;
+    width: 320px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.14);
     position: relative;
     & input {

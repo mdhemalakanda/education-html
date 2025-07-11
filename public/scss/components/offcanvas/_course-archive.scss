@@ -1,0 +1,77 @@
+.ed-course-archive-offcanvas {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: var(--ed-color-white);
+    z-index: 9;
+    overflow-y: auto;
+    max-height: 100%;
+    overflow-x: hidden;
+    width: 350px;
+    transition: all .3s;
+    transform: translateX(-350px);
+
+    &.ed-right-pos {
+        left: auto;
+        right: 0;
+        transform: translateX(350px);
+    }
+
+    &.active {
+        transform: translateX(0);
+    }
+
+    @media #{$xs} {
+        max-width: 290px;
+    }
+    
+    .ed-course-archive-filter-wrapper {
+        border: 0;
+        border-radius: 0;
+    }
+
+    .ed-filter-widget.ed-widget-transparent {
+        padding: 20px;
+    }
+}
+
+.ed-offcanvas-overlay {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8;
+    opacity: 1;
+    visibility: visible;
+    background-color: rgba(0,0,0,.5);
+    backdrop-filter: blur(5px);
+    transition: var(--transition);
+    cursor: url(../images/icons/cursor-x.webp),pointer;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.ed-offcanvas-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.ed-offcanvas-close-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 0;
+
+    &:hover {
+        background-color: var(--ed-color-primary);
+        color: var(--ed-color-white);
+    }
+}
+
+.ed-course-archive-offcanvas-top-head {
+    padding: 20px 20px;
+    padding-bottom: 5px;
+
+}

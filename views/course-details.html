@@ -1,0 +1,830 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% include "partials/head.html" %}
+</head>
+<body>
+    <!-- header area start -->
+    <header class="ed-header-area">
+        {% include "components/header/layout-1/topbar.html" %}
+        {% include "components/header/layout-1/middle.html" %}
+        {% include "components/header/layout-1/nav.html" %}
+    </header>
+    <!-- header area end -->
+
+    {% from "components/breadcrumb/layout-1.html" import breadcrumb %}
+
+    {{ breadcrumb("Course Details", [
+        { label: "Home", url: "/" },
+        { label: "course", url: "/" },
+        { label: "Course Details" }
+    ]) }}
+
+    <div class="ed-course-details-area ed-course-details-space-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-8">
+                    <div class="ed-course-discover-area">
+                        {% import "components/course-details/discover-box.html" as course %}
+                        {{ course.courseDiscover(
+                        "What You’ll Discover",
+                        "Mauris libero Ut accumsan ac nisi eget placerat. Maecenas ornare lectus ut metus feugiat viverra. Inelit sapien blandit at ligula sit amet, mattis aliquam elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus vel mi auctor, lobortis nisl et, ultricies neque.",
+                        [
+                            "Build a portfolio of 100 Python projects to showcase your developer skills.",
+                            "Gain the skills to apply Python in data science and machine learning.",
+                            "Transform your Python skills by building a project every day for 100 days.",
+                            "Develop the expertise to build real-world applications using Python."
+                        ]
+                        ) }}
+                    </div>
+
+                    <div class="ed-course-related-topic-area ed-pt-60">
+                        {% import "components/title/course-details-sm-title.html" as titleComponent %}
+                        {{ titleComponent.getTItle('See also related topics') }}
+                        {% import "components/ui/button-group-2.html" as buttons %}
+
+                        {{ buttons.buttonGroup([
+                            { label: "Python" },
+                            { label: "Programming Languages" },
+                            { label: "Our Vision" }
+                        ]) }}
+
+                    </div>
+
+                    <div class="ed-course-get-access-area ed-mt-35">
+                        {% import "components/title/course-details-sm-title.html" as titleComponent %}
+                        {{ titleComponent.getTItle('You’ll get access to:') }}
+
+                        {% import "components/list/layout-3.html" as lists %}
+
+                        {{ lists.regularList([
+                        { icon: "fal fa-video", label: "24-hour streaming video access" },
+                        { icon: "fal fa-calendar-check", label: "Assignments" },
+                        { icon: "fal fa-file-alt", label: "240 articles" },
+                        { icon: "fal fa-download", label: "174 files available for download" },
+                        { icon: "fal fa-mobile-alt", label: "Watch on your mobile or TV" },
+                        { icon: "fal fa-award", label: "Certificate of Participation" }
+                        ]) }}
+
+                    </div>
+
+                    <div class="ed-coading-instruction-video-area ed-pt-55">
+                        <div class="ed-coading-instruction-video-box">
+                            <div class="row align-items-center">
+                                <div class="col-xxl-6">
+                                    <div class="ed-coading-instruction-video-content-left">
+                                        {% import "components/title/course-details-sm-title.html" as titleComponent %}
+                                        {{ titleComponent.getTItle('Coding Problems') }}
+                                        <p>Practice your skills as you go with our newly revised coding challenges included in the course.</p>
+                                        {% import "components/button/button-border-linked.html" as btn %}
+                                        {{ btn.linked_button('/demo') }}
+                                    </div>
+                                </div>
+                                <div class="col-xxl-6">
+                                    <div class="ed-coading-instruction-video-content-right">
+                                        <img src="/images/banner/coading-problem-instruction.jpg" alt="Coading problem instructions">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ed-course-material-area ed-pt-55">
+                        {% import "components/title/course-details-sm-title.html" as titleComponent %}
+                        {{ titleComponent.getTItle('Course material') }}
+
+                        <ul class="ed-non-link-meta">
+                            <li>112 Section</li>
+                            <li>600 Lectures</li>
+                            <li>62h 24m Total Length</li>
+                        </ul>
+
+                        <div class="ed-course-material-accordion-wrapper">
+                            <div class="ed-coruse-material-accordion-single ed-collapsed">
+                                <div class="ed-course-material-accordion-head">
+                                    <div class="ed-left">
+                                        <div class="ed-icon-toggle"><i class="fal fa-plus"></i></div>
+                                        <h5 class="ed-title">Day 1 – Beginner Python: Managing Data with Variables</h5>
+                                    </div>
+                                    <ul class="ed-non-link-meta">
+                                        <li>12 Lectures</li>
+                                        <li>1hr 10min</li>
+                                    </ul>
+                                </div>
+                                <div class="ed-course-material-accordion-body-wrapper">
+                                    <div class="ed-course-material-accordion-body">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-flag-checkered"></i> Welcome & What You'll Learn Today
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>02:10</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-code"></i> Introduction to Python & Your First Script
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>05:35</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-box"></i> Variables: Storing and Naming Data
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>06:50</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-stream"></i> Data Types in Python (int, float, str, bool)
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>07:20</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-random"></i> Type Conversion: Switching Between Types
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>04:45</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-edit"></i> Hands-on Practice: Build a Simple BMI Calculator
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>12:30</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-brain"></i> Quick Quiz: Test Your Understanding
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>03:00</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ed-coruse-material-accordion-single">
+                                <div class="ed-course-material-accordion-head">
+                                    <div class="ed-left">
+                                        <div class="ed-icon-toggle"><i class="fal fa-plus"></i></div>
+                                        <h5 class="ed-title">Day 2 – Learn Data Types and Master String Manipulation</h5>
+                                    </div>
+                                    <ul class="ed-non-link-meta">
+                                        <li>12 Lectures</li>
+                                        <li>1hr 10min</li>
+                                    </ul>
+                                </div>
+                                <div class="ed-course-material-accordion-body-wrapper">
+                                    <div class="ed-course-material-accordion-body">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-flag-checkered"></i> Welcome & What You'll Learn Today
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>02:00</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-font"></i> What is a String in Python?
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>05:15</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-scissors"></i> Slicing & Indexing Strings
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>06:00</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-sync-alt"></i> String Methods: upper(), lower(), replace()
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>07:45</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-link"></i> Combining & Formatting Strings (f-strings)
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>06:20</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-question-circle"></i> Checking Substrings with 'in'
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>04:30</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-code"></i> Practice: Create a User Welcome Message Generator
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>10:45</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-brain"></i> Quiz: Strings & Data Type Mastery
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>03:15</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ed-coruse-material-accordion-single">
+                                <div class="ed-course-material-accordion-head">
+                                    <div class="ed-left">
+                                        <div class="ed-icon-toggle"><i class="fal fa-plus"></i></div>
+                                        <h5 class="ed-title">Day 3 – Python Basics: Control Flow and Boolean Logic</h5>
+                                    </div>
+                                    <ul class="ed-non-link-meta">
+                                        <li>22 Lectures</li>
+                                        <li>3hr 10min</li>
+                                    </ul>
+                                </div>
+                                <div class="ed-course-material-accordion-body-wrapper">
+                                    <div class="ed-course-material-accordion-body">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-flag-checkered"></i> Welcome & What You'll Learn Today
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>02:05</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-equals"></i> Comparison Operators: >, <, ==, !=
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>05:45</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-code-branch"></i> Control Flow: if, elif, else
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>07:10</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-toggle-on"></i> Boolean Logic: and, or, not
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>06:20</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-shield-alt"></i> Truthy & Falsy Values in Python
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>04:50</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-check-circle"></i> Practical: Validate a User's Age
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>09:00</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-code"></i> Mini Project: Password Strength Checker
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>11:20</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-brain"></i> Quiz: Mastering Boolean Logic
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>03:30</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ed-coruse-material-accordion-single">
+                                <div class="ed-course-material-accordion-head">
+                                    <div class="ed-left">
+                                        <div class="ed-icon-toggle"><i class="fal fa-plus"></i></div>
+                                        <h5 class="ed-title">Day 4 – Learn Python Lists and Random Functions</h5>
+                                    </div>
+                                    <ul class="ed-non-link-meta">
+                                        <li>32 Lectures</li>
+                                        <li>4hr 10min</li>
+                                    </ul>
+                                </div>
+                                <div class="ed-course-material-accordion-body-wrapper">
+                                    <div class="ed-course-material-accordion-body">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-flag-checkered"></i> Welcome & What You'll Learn Today
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>02:00</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-list-ul"></i> Introduction to Lists in Python
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>06:10</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-sort-amount-down"></i> List Indexing & Slicing
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>05:25</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-tools"></i> Common List Methods: append(), remove(), etc.
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>07:15</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-exchange-alt"></i> Replacing & Sorting List Items
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>05:50</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-dice"></i> Using Python’s random Module
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>06:40</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-gamepad"></i> Practice: Build a Random Item Picker
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>10:30</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-brain"></i> Quiz: Lists & Random Mastery Check
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>03:20</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ed-coruse-material-accordion-single">
+                                <div class="ed-course-material-accordion-head">
+                                    <div class="ed-left">
+                                        <div class="ed-icon-toggle"><i class="fal fa-plus"></i></div>
+                                        <h5 class="ed-title">Day 5 – Understanding For and While Loops in Python</h5>
+                                    </div>
+                                    <ul class="ed-non-link-meta">
+                                        <li>12 Lectures</li>
+                                        <li>3hr 10min</li>
+                                    </ul>
+                                </div>
+                                <div class="ed-course-material-accordion-body-wrapper">
+                                    <div class="ed-course-material-accordion-body">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-flag-checkered"></i> Welcome & What You'll Learn Today
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>01:55</span>
+                                                </div>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-repeat"></i> What is a Loop? Understanding Repetition
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>05:45</span>
+                                                </div>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-arrow-right"></i> The For Loop: Basics and Syntax
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>07:20</span>
+                                                </div>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-arrow-circle-right"></i> Looping Through Lists
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>06:10</span>
+                                                </div>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-retweet"></i> The While Loop: Control with Conditions
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>06:50</span>
+                                                </div>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-exclamation-triangle"></i> Avoiding Infinite Loops
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>04:40</span>
+                                                </div>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-code"></i> Practice: Number Guessing Game with Loops
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>11:00</span>
+                                                </div>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                <div class="ed-left">
+                                                    <span class="ed-course-left">
+                                                    <i class="fal fa-brain"></i> Quiz: Test Your Loop Knowledge
+                                                    </span>
+                                                </div>
+                                                <div class="ed-right">
+                                                    <span>03:10</span>
+                                                </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="primary-soft-full-btn">98 additional sections</button>
+                    </div>
+
+                    <div class="ed-course-requirement-area ed-course-requirement-space-top">
+                        {% import "components/title/course-details-sm-title.html" as titleComponent %}
+                        {{ titleComponent.getTItle('Requirements') }}
+                        {% import "components/list/layout-4.html" as list %}
+
+                        {% set items1 = [
+                        "Build a portfolio of 100 Python projects to showcase your developer skills.",
+                        "Gain the skills to apply Python in data science and machine learning.",
+                        "Transform your Python skills by building a project every day for 100 days.",
+                        "Develop the expertise to build real-world applications using Python."
+                        ] %}
+
+                        {{ list.bulletList(items1) }}
+
+                    </div>
+
+                    <div class="ed-course-description-area ed-course-description-space-top">
+                        {% import "components/title/course-details-sm-title.html" as titleComponent %}
+                        {{ titleComponent.getTItle('Description') }}
+                        <div class="ed-course-description-content">
+                            <p>
+                                    Welcome to the 100 Days of Code: The Complete Python Pro Bootcamp — a comprehensive course designed to teach you Python from the ground up. With over 500,000 five-star reviews and an average rating of 4.8, this is one of the top-rated courses on Udemy.
+                                </p>
+                                <strong>Achieve Python mastery with 100 hands-on projects — one per day over 100 days.</strong>
+                                <p>
+                                    With over 60 hours of content, this is one of the most in-depth Python courses available online. Whether you're a complete beginner or new to programming, this course will guide you from the basics to a professional level. Here’s how:
+                                </p>
+                                <ul>
+                                    <li>You’ll learn from the lead instructor at the App Brewery, London’s best in-person coding bootcamp.</li>
+                                    <li>The course has been refreshed to include the newest tools and technologies utilized by major companies like Apple, Google, and Netflix.</li>
+                                    <li>It took two years of student testing and feedback to build the curriculum.</li>
+                                    <li>New projects and modules are added regularly, thanks to input from students like you.</li>
+                                </ul>
+                                <p>
+                                    Throughout the 100 days, you will build real-world projects that reinforce what you’ve learned, including a portfolio-ready web scraper, a blog website using Flask, and a data dashboard using APIs and Pandas. By the end of the course, you'll not only understand Python, but also have hands-on experience with libraries such as NumPy, Matplotlib, Selenium, BeautifulSoup, and more.
+                                </p>
+                                <p>
+                                    The course also includes in-depth sections on automation, data science, web development, and app development with Python. You'll gain practical skills by working with Git, GitHub, virtual environments, and debugging tools that professional developers use every day.
+                                </p>
+                                <p>
+                                    What sets this course apart is the structured, challenge-based approach. Every day, you complete a project that reinforces new concepts, helping you stay engaged and motivated. Whether your goal is to get hired as a Python developer, automate repetitive tasks at work, or build your own software, this course is designed to help you succeed.
+                                </p>
+                                <p>
+                                    By the end of the 100 days, you’ll have the confidence and capability to tackle real-world coding problems, apply for junior developer jobs, contribute to open-source projects, or even launch your own apps. You bring the commitment — we provide the roadmap to success.
+                                </p>
+
+                                <strong>Master Python by building 100 real-world projects — one per day for 100 days.</strong>
+
+                                <p>
+                                    This course offers over 60 hours of on-demand video content, detailed explanations, coding challenges, and quizzes to reinforce your learning. It’s perfect for total beginners, self-taught developers, or anyone looking to upskill with Python. No prior programming experience is required — we start with the very basics and gradually progress to advanced topics.
+                                </p>
+
+                                <ul>
+                                    <li>Learn from the lead instructor of London’s #1 coding bootcamp — the App Brewery.</li>
+                                    <li>Updated regularly with new tools and technologies used by companies like Google, Netflix, and Apple.</li>
+                                    <li>Curriculum built with feedback from thousands of students over two years of testing and refinement.</li>
+                                    <li>Access to downloadable resources, cheat sheets, and lifetime updates.</li>
+                                </ul>
+
+                                <p>
+                                    You'll start by mastering Python fundamentals — variables, functions, loops, conditionals, and data structures — and then build on that foundation by diving into more complex concepts. As you progress, you’ll gain hands-on experience with object-oriented programming, error handling, file I/O, and working with external libraries and APIs.
+                                </p>
+
+                                <p>
+                                    Each day, you’ll complete a self-contained coding project that teaches a specific skill. Projects include building a Blackjack game, a Twitter bot, a quiz app, a web scraper, a weather app, a stock trading dashboard, and much more. These aren’t just toy examples — they’re designed to simulate real-world development and challenge you to think like a programmer.
+                                </p>
+
+                                <p>
+                                    By Day 50, you'll be comfortable working with intermediate concepts like decorators, generators, and comprehensions. You'll also explore essential tools like Git and GitHub, virtual environments, and debugging techniques. We teach best practices in clean code, testing, and documentation, so your projects are not only functional but also professional.
+                                </p>
+
+                                <p>
+                                    As you move into the second half of the bootcamp, the focus shifts toward full-stack development, automation, and data science. You'll build dynamic websites using Flask, create RESTful APIs, use SQL and SQLite for databases, and even deploy your own web apps to the cloud. In the data science track, you’ll get hands-on with NumPy, Pandas, Matplotlib, and Seaborn — building data visualizations and analyzing real datasets.
+                                </p>
+
+                                <p>
+                                    You’ll also explore Python automation — writing scripts to save time, scrape websites, send emails, and work with spreadsheets and files. These practical skills are incredibly valuable for professionals in any industry, including finance, marketing, journalism, research, and more.
+                                </p>
+
+                                <p>
+                                    By the end of the 100 days, you will have built a complete portfolio of over 100 Python projects. More importantly, you’ll have developed a daily coding habit, strong problem-solving skills, and the confidence to take on real-world development challenges. Whether you’re aiming to land your first developer job, automate workflows in your current job, or launch your own tech startup, this course provides the tools and knowledge to get there.
+                                </p>
+
+                                <p>
+                                    Unlike other tutorials that leave you feeling lost after a few lessons, this bootcamp is structured, motivating, and designed to help you stick with it. You won’t just watch videos — you’ll code alongside the instructor and apply what you learn immediately.
+                                </p>
+
+                                <p>
+                                    Join a global community of over 1 million students and take the first step toward becoming a professional Python developer. Enroll now and start your 100-day coding journey today.
+                                </p>
+                        </div>
+
+                        <button class="ed-theme-color-btn ed-course-archive-show-more-btn"><span>Show more</span> <i class="fal fa-angle-down"></i></button>
+                    </div>
+
+                    <div class="ed-customer-review-box">
+                        {% import "components/title/course-details-sm-title.html" as titleComponent %}
+                        {{ titleComponent.getTItle('Customer Review') }}
+
+                        <div class="ed-sm-author-box-4">
+                            <div class="ed-image">
+                                <img src="/images/author/author-customer-1.jpg" alt="Customer Author">
+                            </div>
+                            <div class="ed-content">
+                                <h5 class="ed-name">Alan Fresco</h5>
+                                <span class="ed-course-enrolled">62 course</span>
+                            </div>
+                        </div>
+
+                        <div class="ed-customer-review-box-wrapper">
+                            <span class="ed-review-count">46 reviews</span>
+
+                            <div class="ed-customer-review-rating-wrapper">
+                                <div class="ed-rating">
+                                    <i class="fal fa-star"></i>
+                                    <i class="fal fa-star"></i>
+                                    <i class="fal fa-star"></i>
+                                    <i class="fal fa-star"></i>
+                                    <i class="fal fa-star"></i>
+                                </div>
+                                <span class="ed-label">4 years ago</span>
+                            </div>
+                        </div>
+
+                        <p class="ed-desc">Alan Fresco is an excellent instructor, and I've completed several of her other courses. This one maintains the same high standard. It's not a basic code-along—Angela encourages active learning by consistently challenging you to apply what you've learned. By the end, you'll have a strong grasp of Python programming.</p>
+
+                        <div class="ed-customer-review-box-bottom-wrapper">
+                            <div class="row">
+                                <div class="col-xxl-6">
+                                    <h6 class="ed-title">Was this helpful to you?</h6>
+                                    <div class="ed-like-btn-group">
+                                        <button><i class="fal fa-thumbs-up"></i></button>
+                                        <button><i class="fal fa-thumbs-down"></i></button>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-6">
+                                    <div class="text-end">
+                                        <a href="#" class="ed-classic-btn">Report</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {% include "components/footer/layout-1.html" %}
+
+    {% include "partials/scripts.html" %}
+</body>
+</html>

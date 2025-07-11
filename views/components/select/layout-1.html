@@ -1,0 +1,11 @@
+{% macro renderSelect(name, id, options, selected) %}
+<div class="ed-select">
+  <select name="{{ name }}" id="{{ id }}">
+    {% for option in options %}
+      <option value="{{ option.value }}">
+        {{ option.label }}
+      </option>
+    {% endfor %}
+  </select>
+</div>
+{% endmacro %}

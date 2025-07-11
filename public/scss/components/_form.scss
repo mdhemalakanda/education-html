@@ -1,94 +1,94 @@
 
 .ed-subscribe-form {
-    .ed-subscribe-form-input-area {
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      padding: 5px;
-      display: flex;
+  .ed-subscribe-form-input-area {
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    padding: 5px;
+    display: flex;
 
-      @media #{$xs} {
-        flex-wrap: wrap;
+    @media #{$xs} {
+      flex-wrap: wrap;
+    }
+
+    input {
+      flex-grow: 1;
+      border: 0;
+      padding-left: 15px;
+      background: transparent;
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.7);
+
+      &:focus-within {
+        outline: none;
       }
 
-      input {
-        flex-grow: 1;
-        border: 0;
-        padding-left: 15px;
-        background: transparent;
-        font-size: 15px;
+      &::placeholder {
         color: rgba(255, 255, 255, 0.7);
-
-        &:focus-within {
-          outline: none;
-        }
-
-        &::placeholder {
-          color: rgba(255, 255, 255, 0.7);
-        }
-      }
-
-      button {
-        font-size: 15px;
-        font-weight: 700;
-        border: 0;
-        background: var(--ed-color-primary);
-        color: var(--ed-color-white);
-        height: 42px;
-        padding: 0 20px;
       }
     }
 
-    .ed-subscribe-form-input-label {
-      label {
-        font-size: 16px;
-        color: rgba(255, 255, 255, 0.7);
-        position: relative;
-
-        a {
-          color: var(--ed-color-white);
-
-          &:hover {
-            color: var(--ed-color-secondary);
-          }
-        }
-
-        &::before {
-          width: 14px;
-          height: 14px;
-          border: 1px solid rgba(255, 255, 255, 0.4);
-          content: "";
-          display: inline-block;
-          vertical-align: middle;
-          transform: translateY(-1px);
-          margin-right: 8px;
-        }
-
-        &::after {
-          position: absolute;
-          left: 2px;
-          top: 5px;
-          font-family: "Font awesome 6 pro";
-          content: "\f00c";
-          font-size: 9px;
-          transition: all 0.3s;
-          opacity: 0;
-          visibility: hidden;
-
-          @media #{$md} {
-            left: 3px;
-          }
-        }
-      }
-
-      input {
-        display: none;
-      }
-
-      input:checked ~ label::after {
-        opacity: 1;
-        visibility: visible;
-      }
+    button {
+      font-size: 15px;
+      font-weight: 700;
+      border: 0;
+      background: var(--ed-color-primary);
+      color: var(--ed-color-white);
+      height: 42px;
+      padding: 0 20px;
     }
   }
+
+  .ed-subscribe-form-input-label {
+    label {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.7);
+      position: relative;
+
+      a {
+        color: var(--ed-color-white);
+
+        &:hover {
+          color: var(--ed-color-secondary);
+        }
+      }
+
+      &::before {
+        width: 14px;
+        height: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        transform: translateY(-1px);
+        margin-right: 8px;
+      }
+
+      &::after {
+        position: absolute;
+        left: 2px;
+        top: 5px;
+        font-family: "Font awesome 6 pro";
+        content: "\f00c";
+        font-size: 9px;
+        transition: all 0.3s;
+        opacity: 0;
+        visibility: hidden;
+
+        @media #{$md} {
+          left: 3px;
+        }
+      }
+    }
+
+    input {
+      display: none;
+    }
+
+    input:checked ~ label::after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
 
 
   // Form search.
@@ -127,5 +127,50 @@
   @media #{$xs} {
     text-align: center;
     padding: 10px 0 !important;
+  }
+}
+
+
+.ed-search-form-2 {
+  width: 300px;
+  height: 50px;
+  display: inline-block;
+  border-radius: 100px;
+  border: 1px solid var(--ed-color-border-soft);
+  position: relative;
+  overflow: hidden;
+
+  input {
+    height: 100%;
+    width: 100%;
+    padding: 0 20px;
+    border: 0;
+    background: transparent;
+    font-size: 15px;
+    color: rgba(5, 12, 31, 0.70);
+    padding-right: 50px;
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: rgba(5, 12, 31, 0.70);
+    }
+  }
+
+  button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    padding: 0 17px;
+    border: 0;
+    background: transparent;
+
+    &:hover {
+      background: var(--ed-color-black);
+      color: var(--ed-color-white);
+    }
   }
 }

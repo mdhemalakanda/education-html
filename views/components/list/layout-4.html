@@ -1,0 +1,7 @@
+{% macro bulletList(items, class='') %}
+  <ul class="ed-bullet-list {{ class }}">
+    {% for item in items %}
+      <li><i class="ed-bullete"></i>{{ item }}</li>
+    {% endfor %}
+  </ul>
+{% endmacro %}

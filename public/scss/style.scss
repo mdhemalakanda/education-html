@@ -3,6 +3,7 @@
 @import './abstracts/color';
 @import './abstracts/common';
 @import './abstracts/animation';
+@import './abstracts/scrollbar';
 @import './components/header/header-1';
 @import './components/header/header-2';
 @import './components/button';
@@ -23,6 +24,7 @@
 @import './components/accordion';
 @import './components/swiper-controls';
 @import './components/blog';
+@import './components/select';
 @import './components/footer';
 @import './components/form';
 @import './components/widgets/footer/widget-default';
@@ -37,3 +39,8 @@
 @import './components/navigation';
 @import './components/testimonial-section';
 @import './components/subscribe';
+@import './components/breadcrumb';
+@import './components/course-archive';
+@import './components/widgets/archive/course';
+@import './components/offcanvas/course-archive';
+@import './components/course-details';

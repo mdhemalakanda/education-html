@@ -50,3 +50,78 @@
     }
   }
 }
+
+.ed-coruse-material-accordion-single {
+  background: rgba(5, 12, 31, 0.06);
+  transition: all .3s;
+  border: 1px solid transparent;
+
+  &.ed-collapsed {
+    background: transparent;
+    border: 1px solid rgba(237, 242, 246, 1);
+  }
+
+  .ed-course-material-accordion-body {
+    padding: 30px;
+    padding-top: 0;
+
+    ul {
+      li {
+        list-style: none;
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+
+        a {
+          font-size: 14px;
+        color: var(--ed-color-body);
+        text-decoration: none;
+        display: flex;
+        justify-content: space-between;
+
+        &:hover {
+          color: var(--ed-color-primary);
+        }
+
+          i {
+            font-size: 13px;
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+  }
+
+
+  .ed-course-material-accordion-head {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 28px 30px;
+
+    .ed-left {
+      display: flex;
+      align-content: center;
+      grid-gap: 20px;
+
+      .ed-icon-toggle {
+        i {
+          font-size: 14px;
+        }
+      }
+
+      .ed-title {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.ed-course-material-accordion-wrapper .ed-coruse-material-accordion-single {
+	margin-bottom: 10px;
+}
+.ed-coruse-material-accordion-single:not(.ed-collapsed) .ed-course-material-accordion-body-wrapper {
+	display: none;
+}

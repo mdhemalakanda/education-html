@@ -18,7 +18,7 @@
                 <div class="ed-footer-widget-right ed-pl-40">
                     <div class="row">
                         <div class="col-xxl-4 col-sm-4">
-                            {% import "components/widgets/layout-1.html" as widget %}
+                            {% import "components/widgets/footer/layout-1.html" as widget %}
 
                             {% set quickLinks = [
                                 { label: "Marketplace", url: "#" },
@@ -31,7 +31,7 @@
                             {{ widget.footerWidget("Quick Links", 1, quickLinks) }}
                         </div>
                         <div class="col-xxl-4 col-sm-4">
-                            {% import "components/widgets/layout-1.html" as widget %}
+                            {% import "components/widgets/footer/layout-1.html" as widget %}
 
                             {% set companyLinks = [
                                 { label: "About Us", url: "#" },
@@ -45,7 +45,7 @@
 
                         </div>
                         <div class="col-xxl-4 col-sm-4">
-                            {% import "components/widgets/layout-1.html" as widget %}
+                            {% import "components/widgets/footer/layout-1.html" as widget %}
 
                             {% set learningLinks = [
                                 { label: "Media Relations", url: "#" },

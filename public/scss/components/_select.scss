@@ -1,0 +1,22 @@
+.ed-select {
+    position: relative;
+    display: inline-block;
+
+    &::after {
+        content: "\f107";
+        font-family: "Font awesome 6 pro";
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+    select {
+        background: var(--ed-color-soft-primary);
+        border: 0;
+        height: 50px;
+        padding: 0 20px;
+        border-radius: 50px;
+        appearance: none;
+    }
+}

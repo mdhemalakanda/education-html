@@ -75,3 +75,25 @@
     }
   }
 }
+
+
+.ed-non-link-meta {
+
+    li {
+      list-style: none;
+      display: inline-block;
+      font-size: 14px;
+      color: var(--ed-color-body);
+
+      &:not(:last-child)::after {
+        width: 4px;
+        height: 4px;
+        content: "";
+        display: inline-block;
+        background: var(--ed-color-primary);
+        border-radius: 50%;
+        vertical-align: middle;
+        margin: 0 8px;
+      }
+    }
+  }

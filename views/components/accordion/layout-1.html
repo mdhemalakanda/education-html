@@ -1,0 +1,29 @@
+{% macro renderAccordion(lists, class='' , accordionId = 'accordionList') %}
+  <div class="ed-accordion {{class}}">
+    <div class="accordion" id="{{ accordionId }}">
+      {% for list in lists %}
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button 
+              class="accordion-button{% if not list.expanded %} collapsed{% endif %}" 
+              type="button" 
+              data-bs-toggle="collapse" 
+              data-bs-target="#{{ list.id }}" 
+              aria-expanded="{{ list.expanded }}" 
+              aria-controls="{{ list.id }}">
+              {{ list.label | safe }}
+            </button>
+          </h2>
+          <div 
+            id="{{ list.id }}" 
+            class="accordion-collapse collapse{% if list.expanded %} show{% endif %}" 
+            data-bs-parent="#{{ accordionId }}">
+            <div class="accordion-body">
+              {{ list.value | safe }}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endmacro %}

@@ -1,0 +1,7 @@
+{% macro regularList(items) %}
+  <ul class="ed-regular-list-2-col">
+    {% for item in items %}
+      <li><i class="{{ item.icon }}"></i> {{ item.label }}</li>
+    {% endfor %}
+  </ul>
+{% endmacro %}
